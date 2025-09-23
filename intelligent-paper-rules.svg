@@ -1,0 +1,23 @@
+
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white" />
+  <text x="10" y="30" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" font-size="20" fill="black">
+    Intelligent Paper Rules:
+  </text>
+  <text x="10" y="60" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" font-size="16" fill="black">
+    1. If you can win, win!
+  </text>
+  <text x="10" y="90" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" font-size="16" fill="black">
+    2. If the other player can win, block them.
+  </text>
+  <text x="10" y="120" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" font-size="16" fill="black">
+    3. Go in the center square if it's free.
+  </text>
+  <text x="10" y="150" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" font-size="16" fill="black">
+    4. Go in a corner square if one is free.
+  </text>
+  <text x="10" y="180" font-family="Comic Sans MS, Chalkboard SE, Marker Felt, sans-serif" font-size="16" fill="black">
+    5. Go in any other square.
+  </text>
+  <path d="M 250 50 L 250 350 M 350 50 L 350 350 M 200 150 L 400 150 M 200 250 L 400 250" stroke="black" stroke-width="4"/>
+</svg>
