@@ -131,3 +131,32 @@ body {
 .breadcrumbs a:hover {
     text-decoration: underline;
 }
+
+.activity {
+    background-color: #f9f9f9;
+    border: 2px dashed #4a90e2;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.activity h3 {
+    color: #e91e63;
+    font-size: 1.5em;
+}
+
+.activity h4 {
+    color: #ff9800;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.activity p, .activity ul {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.activity ul {
+    padding-left: 20px;
+}
