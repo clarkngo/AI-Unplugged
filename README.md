@@ -1,16 +1,40 @@
-# React + Vite
+# 🔌 AI Unplugged
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An educational, kid-friendly site that teaches core AI concepts through unplugged, hands-on activities. Built with React + Vite and deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Hash-based routing for static hosting compatibility
+- Modular pages and components (Home, What is AI, Machine Learning, Computer Vision, NLP, Generative AI, AI Ethics, Robotics)
+- Public assets served from `public/images` with BASE_URL-aware paths
+- Clean, centered design inspired by csunplugged.org
 
-## React Compiler
+## Quick start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```sh
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open the local URL shown by Vite. The app uses `HashRouter`, so refreshes won’t 404 on static hosts.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Scripts
+
+- `npm run dev` — start the dev server
+- `npm run build` — production build (required before push, see GEMINI.md)
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint
+
+## Deployment
+
+The site is deployed via GitHub Pages. Vite `base` is set to `/AI-Unplugged/` to ensure asset paths resolve correctly in production. Pushing to `main` triggers the workflow.
+
+## Contributing
+
+- Do not import code or assets from `reference/` at runtime; treat it as an archive/time capsule
+- Add or update entries in `CHANGELOG.md` with an ISO 8601 timestamp for notable changes
+- Run `npm run build` before pushing changes (see rules in `GEMINI.md`)
+
+## License
+
+MIT

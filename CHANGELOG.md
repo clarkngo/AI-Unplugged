@@ -94,3 +94,9 @@ Future changes: For any new or modified routes, components, or public assets, ad
   - Files: `src/components/Header.jsx` (hero title), `src/components/NavBar.jsx` (brand text)
   - Reasoning: Align UI copy and visuals with the repository and project identity.
 
+## 2025-10-16T02:45:00Z
+
+- Updated HTML document title and Open Graph title to "🔌 AI Unplugged"; aligned README to project branding and usage.
+  - Files: `index.html` (title, og:title), `README.md` (project readme)
+  - Reasoning: Ensure consistent branding across the document title, social previews, and repository documentation.
+
