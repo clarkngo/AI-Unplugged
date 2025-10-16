@@ -4,7 +4,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: '/AI-tools/',
+  base: '/AI-Unplugged/',
   plugins: [
     // Include the necessary framework plugin
     react(),

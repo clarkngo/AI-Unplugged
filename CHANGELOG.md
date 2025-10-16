@@ -58,4 +58,12 @@ All notable structural changes to this project will be documented in this file. 
     - Improved section spacing and title styling
   - Reasoning: Cards were stretching too wide on the grid, especially in "Getting Started" section. New layout creates compact, well-proportioned cards that maintain consistent sizing.
 
+## 2025-10-16T01:40:00Z
+
+- **CRITICAL FIX**: Corrected Vite base path to match GitHub repository name.
+  - Files: `vite.config.js`
+  - Changes: Changed `base: '/AI-tools/'` to `base: '/AI-Unplugged/'`
+  - Reasoning: The base path must match the GitHub repository name for GitHub Pages to correctly serve all assets (CSS, JS, images). Previous mismatch caused 404 errors and unstyled pages on production deployment.
+  - Impact: Fixes styling not loading on https://clarkngo.github.io/AI-Unplugged/
+
 Future changes: For any new or modified routes, components, or public assets, add an entry here with a timestamp and brief rationale.
