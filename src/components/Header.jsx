@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function Header() {
   return (
     <div className="header">
-      <h1>🚀 AI Adventures for Kids! 🤖</h1>
+      <h1>� AI Unplugged</h1>
       <p>Welcome to a world of fun and learning about Artificial Intelligence!</p>
       <div className="cta-group">
         <Link to="/what-is-ai" className="btn">Start with "What is AI?"</Link>

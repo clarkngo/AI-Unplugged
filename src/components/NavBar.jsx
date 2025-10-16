@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="nav-inner">
-        <Link to="/" className="brand">AI Adventures</Link>
+        <Link to="/" className="brand">AI Unplugged</Link>
         <div className="nav-links">
           <Link to="/what-is-ai">What is AI?</Link>
           <Link to="/machine-learning">Machine Learning</Link>

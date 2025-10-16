@@ -88,3 +88,9 @@ Future changes: For any new or modified routes, components, or public assets, ad
   - Added pages: `src/pages/Home.jsx`, `src/pages/WhatIsAI.jsx`, `src/pages/HowToTeach.jsx`, `src/pages/MachineLearning.jsx`, `src/pages/ComputerVision.jsx`, `src/pages/NLP.jsx`, `src/pages/GenerativeAI.jsx`, `src/pages/AIEthics.jsx`, `src/pages/Robotics.jsx`.
   - Reasoning: Improve maintainability, readability, and future extensibility without changing route structure.
 
+## 2025-10-16T02:35:00Z
+
+- Updated site branding and hero title from "AI Adventures for Kids" to "AI Unplugged"; adjusted emojis to match the unplugged theme.
+  - Files: `src/components/Header.jsx` (hero title), `src/components/NavBar.jsx` (brand text)
+  - Reasoning: Align UI copy and visuals with the repository and project identity.
+
