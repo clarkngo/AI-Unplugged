@@ -75,3 +75,16 @@ All notable structural changes to this project will be documented in this file. 
   - Impact: Ensures consistent styling without conflicts between index.css and App.css.
 
 Future changes: For any new or modified routes, components, or public assets, add an entry here with a timestamp and brief rationale.
+
+## 2025-10-16T02:20:00Z
+
+- Migrated all lesson images from `reference/` into `public/images/` and updated pages to use public URLs.
+  - Files: `public/images/*` (intelligent-paper-rules.svg, hexapawn-board.svg, happy-face.svg, sad-face.svg, surprised-face.svg, brain-in-a-bag.svg, story-dice.svg, ai-ethics-scenarios.svg, robot-design.svg)
+  - Reasoning: Treat `reference/` as an archive; ensure the app is self-contained at runtime and deployable via GitHub Pages.
+- Introduced `src/utils/paths.js` with `asset()` helper that respects Vite `import.meta.env.BASE_URL`.
+  - Reasoning: Guarantee correct image paths in both local dev (`/`) and production on GitHub Pages (`/AI-Unplugged/`).
+- Refactored monolithic `src/App.jsx` into modular components and pages.
+  - Added components: `src/components/NavBar.jsx`, `src/components/Breadcrumbs.jsx`, `src/components/Header.jsx`.
+  - Added pages: `src/pages/Home.jsx`, `src/pages/WhatIsAI.jsx`, `src/pages/HowToTeach.jsx`, `src/pages/MachineLearning.jsx`, `src/pages/ComputerVision.jsx`, `src/pages/NLP.jsx`, `src/pages/GenerativeAI.jsx`, `src/pages/AIEthics.jsx`, `src/pages/Robotics.jsx`.
+  - Reasoning: Improve maintainability, readability, and future extensibility without changing route structure.
+

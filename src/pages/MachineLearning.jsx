@@ -1,0 +1,64 @@
+import { Link } from 'react-router-dom'
+import Breadcrumbs from '../components/Breadcrumbs'
+import { asset } from '../utils/paths'
+
+export default function MachineLearning() {
+  return (
+    <>
+      <div className="header"><h1>💡 Machine Learning 🧠</h1></div>
+      <Breadcrumbs trail="Machine Learning" />
+      <div className="container">
+        <div className="lesson-content">
+          <h1>How Do Computers Learn?</h1>
+          <p>
+            Have you ever learned how to ride a bike? You probably fell a few times before you got the hang of it. Each time you fell, your brain learned what not to do. Machine Learning is when we let computers learn in a similar way!
+          </p>
+          <h2>What's it all about?</h2>
+          <p>Machine learning is a type of AI where we don't give the computer all the answers. Instead, we give it a way to learn on its own. There are a few ways to do this:</p>
+          <ul>
+            <li><strong>Supervised Learning:</strong> This is like learning with a teacher. We give the computer lots of examples that are already labeled. For example, we show it pictures of cats that are labeled "cat" and pictures of dogs that are labeled "dog". The computer learns to tell the difference.</li>
+            <li><strong>Unsupervised Learning:</strong> This is like learning on your own. We give the computer a bunch of information and it has to find patterns on its own. For example, it might group customers together based on what they buy.</li>
+            <li><strong>Reinforcement Learning:</strong> This is what the "Sweet Learning Computer" game is all about! The computer learns by trial and error. It gets rewards for good moves and punishments for bad moves. Over time, it learns to make better and better decisions.</li>
+          </ul>
+
+          <h2>Real-World Applications</h2>
+          <ul>
+            <li><strong>Spam Filters:</strong> Your email uses machine learning to figure out which emails are spam and which are important.</li>
+            <li><strong>Medical Diagnosis:</strong> Doctors can use machine learning to help them diagnose diseases by looking at medical images like X-rays.</li>
+            <li><strong>Product Recommendations:</strong> When you're shopping online and the website suggests other things you might like, that's machine learning at work!</li>
+            <li><strong>Self-Driving Cars:</strong> These cars use reinforcement learning to learn how to drive safely in different situations.</li>
+          </ul>
+
+          <div className="interactive-activity">
+            <h3>🍬 The Sweet Learning Computer 🍭</h3>
+            <p>
+              This is a yummy activity from AI Unplugged that shows how a "machine" made of candy can learn to play a game.
+            </p>
+            <h4>You will need:</h4>
+            <ul>
+              <li>A friend to play with</li>
+              <li>A Hexapawn game board (a 3x3 grid)</li>
+              <li>3 coins of one color (for you) and 3 of another color (for the computer)</li>
+              <li>About 20 small boxes (like matchboxes)</li>
+              <li>Lots of candy!</li>
+            </ul>
+            <h4>How to Play:</h4>
+            <p>This game is called Hexapawn. The goal is to get one of your coins to the other side of the board, or to stop the other player from being able to move.</p>
+            <img src={asset('images/hexapawn-board.svg')} alt="Hexapawn Game Board" className="activity-image" />
+            <ol>
+              <li>Set up the board with the coins in the first row on each side.</li>
+              <li>You go first. You can move one of your coins forward one space, or capture one of the computer's coins by moving diagonally.</li>
+              <li>Now it's the computer's turn. The computer is made of the matchboxes. Each box will have a picture of a board position on it, and inside will be candies that show the possible moves from that position.</li>
+              <li>Find the box that matches the current board. Take out one candy (one move) and move the computer's coin.</li>
+              <li>If the computer wins, put the candy back and add another one! The computer is rewarded for winning.</li>
+              <li>If the computer loses, it gets "punished" by eating the candy from the last move. That move is removed from the box.</li>
+              <li>Play again! After a few games, the computer will have "learned" how to play better because it has removed its bad moves.</li>
+            </ol>
+          </div>
+
+          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+        </div>
+      </div>
+    </>
+  )
+}

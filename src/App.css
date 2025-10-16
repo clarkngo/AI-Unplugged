@@ -191,6 +191,29 @@ body {
   margin-top: 18px;
 }
 
+.activity-image {
+  max-width: 100%;
+  height: auto;
+  margin: 16px 0;
+  border-radius: 8px;
+  display: block;
+}
+
+.face-examples {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.face-icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 18px;
