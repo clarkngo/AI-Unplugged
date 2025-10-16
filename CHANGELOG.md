@@ -39,4 +39,11 @@ All notable structural changes to this project will be documented in this file. 
   - Files: `src/App.jsx` (Header hero buttons, Activities id), `src/App.css` (hero CTA styles, centered section titles, lesson-content title centering).
   - Reasoning: Fix remaining alignment issues and match csunplugged.org-like landing feel.
 
+## 2025-10-16T01:10:00Z
+
+- Enhanced content centering across all pages for improved visual balance.
+  - Files: `src/App.css` (container width 100%, lesson-content width/margin, header max-width, lesson-grid max-width, improved spacing).
+  - Changes: Added explicit width constraints, centered headers, improved margins and line-height for readability, ensured consistent centering throughout.
+  - Reasoning: Ensure all content (hero, grids, lesson cards, text content) is perfectly centered and responsive across all screen sizes.
+
 Future changes: For any new or modified routes, components, or public assets, add an entry here with a timestamp and brief rationale.

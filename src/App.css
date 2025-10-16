@@ -52,11 +52,14 @@ body {
 .header {
   text-align: center;
   padding: 60px 16px 24px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 .header h1 {
-  margin: 0;
+  margin: 0 auto;
   font-size: clamp(28px, 4vw, 44px);
   color: #0f172a;
+  max-width: 900px;
 }
 .header p { color: var(--muted); margin: 10px auto 0; max-width: 760px; }
 
@@ -82,15 +85,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
-.section-title { text-align: center; margin: 14px 0; scroll-margin-top: 80px; }
+.section-title { text-align: center; margin: 14px 0 24px; scroll-margin-top: 80px; }
 
 .lesson-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 22px;
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 .lesson-card {
   display: block;
@@ -124,14 +130,18 @@ body {
   background: #ffffff;
   border: 1px solid var(--card-border);
   border-radius: 18px;
-  padding: 28px;
+  padding: 32px;
   box-shadow: 0 8px 20px rgba(2, 6, 23, 0.05);
   max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
-.lesson-content h1 { font-size: 28px; margin-top: 0; text-align: center; }
-.lesson-content h2 { margin-top: 20px; }
-.lesson-content p { color: var(--fg); line-height: 1.6; }
-.lesson-content ul { color: var(--fg); }
+.lesson-content h1 { font-size: 28px; margin-top: 0; margin-bottom: 18px; text-align: center; }
+.lesson-content h2 { margin-top: 24px; margin-bottom: 12px; }
+.lesson-content h3 { margin-top: 20px; margin-bottom: 10px; }
+.lesson-content p { color: var(--fg); line-height: 1.7; margin-bottom: 14px; }
+.lesson-content ul { color: var(--fg); line-height: 1.6; margin-bottom: 14px; }
+.lesson-content ol { color: var(--fg); line-height: 1.6; margin-bottom: 14px; }
 
 .interactive-activity {
   background: #fff7ed; /* orange-50 */
