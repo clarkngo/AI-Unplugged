@@ -46,4 +46,16 @@ All notable structural changes to this project will be documented in this file. 
   - Changes: Added explicit width constraints, centered headers, improved margins and line-height for readability, ensured consistent centering throughout.
   - Reasoning: Ensure all content (hero, grids, lesson cards, text content) is perfectly centered and responsive across all screen sizes.
 
+## 2025-10-16T01:25:00Z
+
+- Fixed card grid layout and improved visual proportions throughout the site.
+  - Files: `src/App.css` (lesson-grid, lesson-card, container, header, cta-group).
+  - Changes:
+    - Changed grid to `minmax(280px, 340px)` with `justify-content: center` to prevent cards from stretching too wide
+    - Reduced container max-width to 960px for better visual balance
+    - Centered card content with larger icons (52px) and improved typography
+    - Enhanced button sizing and spacing (12px padding, 24px horizontal)
+    - Improved section spacing and title styling
+  - Reasoning: Cards were stretching too wide on the grid, especially in "Getting Started" section. New layout creates compact, well-proportioned cards that maintain consistent sizing.
+
 Future changes: For any new or modified routes, components, or public assets, add an entry here with a timestamp and brief rationale.
