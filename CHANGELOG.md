@@ -66,4 +66,12 @@ All notable structural changes to this project will be documented in this file. 
   - Reasoning: The base path must match the GitHub repository name for GitHub Pages to correctly serve all assets (CSS, JS, images). Previous mismatch caused 404 errors and unstyled pages on production deployment.
   - Impact: Fixes styling not loading on https://clarkngo.github.io/AI-Unplugged/
 
+## 2025-10-16T01:50:00Z
+
+- Simplified index.css to basic resets only, removed conflicting Vite default styles.
+  - Files: `src/index.css`
+  - Changes: Replaced Vite's default theme styles with minimal reset (margin 0, padding 0, box-sizing, body font-family)
+  - Reasoning: The default Vite styles (dark theme, specific colors, button styles) were conflicting with our custom App.css design system. App.css already defines all necessary body and global styles, so index.css should only provide basic resets.
+  - Impact: Ensures consistent styling without conflicts between index.css and App.css.
+
 Future changes: For any new or modified routes, components, or public assets, add an entry here with a timestamp and brief rationale.
