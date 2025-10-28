@@ -245,6 +245,28 @@ body {
   object-fit: cover;
 }
 
+/* Responsive figures for activity pages (e.g. Brain-in-a-Bag) */
+.activity-figures {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 12px 0 18px;
+  justify-content: center;
+}
+.activity-figures img {
+  flex: 1 1 220px; /* allow images to shrink/grow, base 220px */
+  max-width: 48%;
+  min-width: 140px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (max-width: 560px) {
+  .activity-figures img { max-width: 100%; flex-basis: 100%; }
+}
+
 .face-examples {
   display: flex;
   gap: 20px;
