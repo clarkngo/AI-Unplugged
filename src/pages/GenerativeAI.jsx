@@ -30,6 +30,29 @@ export default function GenerativeAI() {
             <p>
               Let's try our own version of generative AI! We'll use dice to randomly generate ideas for a story.
             </p>
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Roll for a character, setting, and problem.</p>
+                  <img src={"/AI-Unplugged/images/story-dice.svg"} alt="story dice" />
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>Write down the three elements from your rolls.</p>
+                  <small>Keep them short: character, place, challenge.</small>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>Use the elements to build a short story — edit for fun.</p>
+                  <small>This mirrors how generative models combine learned pieces.</small>
+                </div>
+              </div>
+            </div>
             <h4>You will need:</h4>
             <ul>
               <li>3 dice (or you can use an online dice roller)</li>

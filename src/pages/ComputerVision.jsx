@@ -25,11 +25,37 @@ export default function ComputerVision() {
             <li><strong>Augmented Reality (AR):</strong> Fun apps like Snapchat and Instagram use computer vision to put silly masks and filters on your face in real-time.</li>
           </ul>
 
-          <div className="interactive-activity">
+            <div className="interactive-activity">
             <h3>🎨 Create-a-Face 🤪</h3>
             <p>
               This activity from AI Unplugged helps us think about how computers can recognize emotions.
             </p>
+              <div className="activity-visual">
+                <div className="step">
+                  <div className="step-num">1</div>
+                  <div className="step-body">
+                    <p>Draw and cut out face parts (eyes, mouth, eyebrows).</p>
+                    <div style={{display:'flex',gap:8,marginTop:6}}>
+                      <img src={"/AI-Unplugged/images/happy-face.svg"} alt="happy" style={{width:56}} />
+                      <img src={"/AI-Unplugged/images/sad-face.svg"} alt="sad" style={{width:56}} />
+                    </div>
+                  </div>
+                </div>
+                <div className="step">
+                  <div className="step-num">2</div>
+                  <div className="step-body">
+                    <p>Create simple rules that map parts to emotions (e.g., smile + wide eyes = happy).</p>
+                    <small>Write the rule next to each combination so it's clear to a computer.</small>
+                  </div>
+                </div>
+                <div className="step">
+                  <div className="step-num">3</div>
+                  <div className="step-body">
+                    <p>Mix parts to test different emotions and refine rules.</p>
+                    <small>Use the surprised face example as a test case.</small>
+                  </div>
+                </div>
+              </div>
             <h4>You will need:</h4>
             <ul>
               <li>Paper and markers or crayons</li>

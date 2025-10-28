@@ -31,6 +31,27 @@ export default function AIEthics() {
               Let's think about some different situations and decide if the AI is being fair or unfair.
             </p>
             <img src={asset('images/ai-ethics-scenarios.svg')} alt="AI Ethics Scenarios" className="activity-image" />
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Read each scenario and mark if it seems fair or unfair.</p>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>Discuss why — identify possible sources of bias or harm.</p>
+                  <small>Check data, rules, and who benefits.</small>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>Propose a change to make the system fairer and test it.</p>
+                </div>
+              </div>
+            </div>
             <h4>Scenarios:</h4>
             <ul>
               <li>A robot is programmed to deliver cookies, but it only delivers them to houses that are painted blue. Is that fair?</li>

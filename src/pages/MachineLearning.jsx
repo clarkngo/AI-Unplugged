@@ -34,6 +34,29 @@ export default function MachineLearning() {
             <p>
               This is a yummy activity from AI Unplugged that shows how a "machine" made of candy can learn to play a game.
             </p>
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Set up Hexapawn on a 3×3 grid with coins.</p>
+                  <img src={"/AI-Unplugged/images/hexapawn-board.svg"} alt="hexapawn board" />
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>Computer (matchboxes) chooses a move using a candy token.</p>
+                  <small>Each matchbox contains candies representing possible moves.</small>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>Reward/punish moves by adding/removing candies and play again.</p>
+                  <small>Over time the computer learns better moves.</small>
+                </div>
+              </div>
+            </div>
             <h4>You will need:</h4>
             <ul>
               <li>A friend to play with</li>

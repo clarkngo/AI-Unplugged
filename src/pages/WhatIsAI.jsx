@@ -30,6 +30,29 @@ export default function WhatIsAI() {
             <p>
               This is a super fun game from AI Unplugged that shows how something as simple as a piece of paper can seem "intelligent" if it has the right instructions.
             </p>
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Draw a Tic-Tac-Toe board on paper.</p>
+                  <img src={"/AI-Unplugged/images/intelligent-paper-rules.svg"} alt="draw board" />
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>Player places X anywhere; that's their move.</p>
+                  <small>Observe the choice — the paper (computer) will respond using rules.</small>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>Follow the paper's rule table to place O and continue play.</p>
+                  <small>Repeat games to see the behaviour emerge.</small>
+                </div>
+              </div>
+            </div>
             <h4>You will need:</h4>
             <ul>
               <li>A piece of paper</li>

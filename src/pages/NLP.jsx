@@ -26,11 +26,34 @@ export default function NLP() {
             <li><strong>Chatbots:</strong> Many websites have chatbots that can answer your questions. These chatbots use NLP to understand what you're asking and provide a helpful response.</li>
           </ul>
 
-          <div className="interactive-activity">
+            <div className="interactive-activity">
             <h3>🧠 The Brain-in-a-Bag 🛍️</h3>
             <p>
               This AI Unplugged activity is a fun way to see how a neural network can be "programmed" to learn.
             </p>
+              <div className="activity-visual">
+                <div className="step">
+                  <div className="step-num">1</div>
+                  <div className="step-body">
+                    <p>Start with an equal number of colored beads in a bag.</p>
+                    <img src={"/AI-Unplugged/images/brain-in-a-bag.svg"} alt="brain in a bag" />
+                  </div>
+                </div>
+                <div className="step">
+                  <div className="step-num">2</div>
+                  <div className="step-body">
+                    <p>Guess which color your friend picked by drawing a bead.</p>
+                    <small>Correct guesses are rewarded by adding a bead of that color.</small>
+                  </div>
+                </div>
+                <div className="step">
+                  <div className="step-num">3</div>
+                  <div className="step-body">
+                    <p>Over repeated plays the bag's distribution shifts toward the chosen color.</p>
+                    <small>This models how a simple learning process updates its internal state.</small>
+                  </div>
+                </div>
+              </div>
             <h4>You will need:</h4>
             <ul>
               <li>A bag</li>

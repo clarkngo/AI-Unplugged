@@ -32,6 +32,27 @@ export default function Robotics() {
               Let's design a robot to solve a problem! What kind of robot would you build?
             </p>
             <img src={asset('images/robot-design.svg')} alt="Robot Design Activity" className="activity-image" />
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Choose a chore your robot will solve (e.g., tidy room).</p>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>Sketch the robot and label sensors (cameras, microphones) and actuators (wheels, grippers).</p>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>Write a short list of instructions the robot follows; test with a role-play.</p>
+                  <small>Role-play as the robot to find gaps in the instructions.</small>
+                </div>
+              </div>
+            </div>
             <h4>Your Mission:</h4>
             <p>Design a robot that can help you with a chore you don't like to do. For example, a robot that cleans your room, does your homework, or walks the dog.</p>
             <h4>Think about:</h4>
