@@ -26,46 +26,8 @@ export default function WhatIsAI() {
           </ul>
 
           <div className="interactive-activity">
-            <h3>🤖 Let's Play "Intelligent Paper"! 📝</h3>
-            <p>
-              This is a super fun game from AI Unplugged that shows how something as simple as a piece of paper can seem "intelligent" if it has the right instructions.
-            </p>
-            <div className="activity-visual">
-              <div className="step">
-                <div className="step-num">1</div>
-                <div className="step-body">
-                  <p>Draw a Tic-Tac-Toe board on paper.</p>
-                </div>
-              </div>
-              <div className="step">
-                <div className="step-num">2</div>
-                <div className="step-body">
-                  <p>Player places X anywhere; that's their move.</p>
-                  <small>Observe the choice — the paper (computer) will respond using rules.</small>
-                </div>
-              </div>
-              <div className="step">
-                <div className="step-num">3</div>
-                <div className="step-body">
-                  <p>Follow the paper's rule table to place O and continue play.</p>
-                  <small>Repeat games to see the behaviour emerge.</small>
-                </div>
-              </div>
-            </div>
-            <h4>You will need:</h4>
-            <ul>
-              <li>A piece of paper</li>
-              <li>A pencil or pen</li>
-              <li>A friend to play with</li>
-            </ul>
-            <h4>How to Play:</h4>
-            <p>This game is like Tic-Tac-Toe, but the paper has a secret... it can't lose! You will be the "computer" and your friend will be the "player".</p>
-            <ol>
-              <li>Draw a Tic-Tac-Toe board on your paper.</li>
-              <li>The player goes first, putting an X in any square.</li>
-              <li>Now it's your turn to be the computer! Follow these rules to decide where to put your O:</li>
-            </ol>
-            <img src={asset('images/intelligent-paper-rules.png')} alt="Intelligent Paper Game Rules" className="activity-image" />
+            <h3>Try an Activity</h3>
+            <p>If you'd like to see these ideas in action, try one of the hands-on activities in the Activities section — for example the <Link to="/machine-learning">Machine Learning</Link> activity explores how simple rules and learning can create surprising behaviour.</p>
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

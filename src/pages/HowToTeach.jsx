@@ -27,26 +27,7 @@ export default function HowToTeach() {
             <Link to="/what-is-ai" className="back-link">Explore "What is AI?"</Link>
           </div>
 
-          <h2>Unplugged Activity Examples</h2>
-          <p>Many AI topics can be explored through simple and fun activities that you can do right in a classroom or at home. Here are a few ideas based on the lessons on this site:</p>
-
-          <h3>Machine Learning: The "Intelligent Piece of Paper"</h3>
-          <p>This classic activity demonstrates how a machine can "learn" to play a game. Students play a simple game like Hexapawn against a "machine" made of matchboxes or paper. The machine learns from its mistakes and eventually becomes an unbeatable player. This teaches the core concept of reinforcement learning.</p>
-          <img src={asset('images/intelligent-paper-rules.png')} alt="Intelligent Paper Game Rules" className="activity-image" />
-          <Link to="/machine-learning" className="back-link">See Machine Learning in Action</Link>
-
-          <h3>Computer Vision: "I Spy" with a Twist</h3>
-          <p>How does a computer "see"? Play a game of "I Spy" where one person (the "computer") can only ask yes/no questions about simple features like shapes, colors, and textures. This simulates how a computer vision model breaks down an image into simple, recognizable patterns.</p>
-          <img src={asset('images/happy-face.svg')} alt="Happy Face" className="activity-image" />
-          <Link to="/computer-vision" className="back-link">Learn About Computer Vision</Link>
-
-          <h3>Generative AI: Story Dice</h3>
-          <p>Generative AI creates new things. A simple way to understand this is with story dice. Each die has a different picture on it. Roll the dice and create a story based on the pictures that come up. This mimics how a generative model uses a set of rules and data to generate new, creative outputs.</p>
-          <img src={asset('images/story-dice.svg')} alt="Story Dice Game" className="activity-image" />
-          <Link to="/generative-ai" className="back-link">Discover Generative AI</Link>
-
-          
-
+          <p>If you want short, hands-on activities to try in class, visit the Activities section (or the All Lessons page) where each lesson contains a focused activity and clear instructions for teachers.</p>
           <p>By using imagination and simple materials, you can unlock the complex world of AI for learners of all ages!</p>
         </div>
         <Link to="/" className="back-link">Back to All Lessons</Link>
