@@ -19,21 +19,21 @@ export default function HowToTeach() {
               <div className="k12-icon">🧩</div>
               <h3>K 1–4 — AI‑Unplugged</h3>
               <p>Hands-on, play-based activities that introduce core ideas with minimal reading — perfect for early learners.</p>
-              <Link to="/what-is-ai" className="back-link">Explore K 1–4</Link>
+              <Link to="/k-1-4" className="back-link">Explore K 1–4</Link>
             </div>
 
             <div className="k12-card">
               <div className="k12-icon">🔧</div>
               <h3>K 5–8 — AI‑Infused</h3>
               <p>Projects that mix unplugged tasks with simple tools or group challenges to explore how AI appears in familiar tech.</p>
-              <Link to="/machine-learning" className="back-link">Explore K 5–8</Link>
+              <Link to="/k-5-8" className="back-link">Explore K 5–8</Link>
             </div>
 
             <div className="k12-card">
               <div className="k12-icon">🚀</div>
               <h3>K 9–12 — AI‑Powered</h3>
               <p>Deeper explorations of models, ethics, and creative AI — activities that prepare students for advanced study.</p>
-              <Link to="/ai-ethics" className="back-link">Explore K 9–12</Link>
+              <Link to="/k-9-12" className="back-link">Explore K 9–12</Link>
             </div>
           </div>
 
