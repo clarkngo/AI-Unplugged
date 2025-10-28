@@ -35,10 +35,6 @@ export default function ComputerVision() {
                   <div className="step-num">1</div>
                   <div className="step-body">
                     <p>Draw and cut out face parts (eyes, mouth, eyebrows).</p>
-                    <div style={{display:'flex',gap:8,marginTop:6}}>
-                      <img src={"/AI-Unplugged/images/happy-face.svg"} alt="happy" style={{width:56}} />
-                      <img src={"/AI-Unplugged/images/sad-face.svg"} alt="sad" style={{width:56}} />
-                    </div>
                   </div>
                 </div>
                 <div className="step">
@@ -75,11 +71,7 @@ export default function ComputerVision() {
               </ul>
               <li>Mix and match your face parts to create your own emotions!</li>
             </ol>
-            <div className="face-examples">
-              <img src={asset('images/happy-face.svg')} alt="Happy Face Example" className="face-icon" />
-              <img src={asset('images/sad-face.svg')} alt="Sad Face Example" className="face-icon" />
-              <img src={asset('images/surprised-face.svg')} alt="Surprised Face Example" className="face-icon" />
-            </div>
+            <img src={asset('images/create-a-face.png')} alt="Create a Face" className="activity-image" />
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

@@ -32,7 +32,7 @@ export default function HowToTeach() {
 
           <h3>Machine Learning: The "Intelligent Piece of Paper"</h3>
           <p>This classic activity demonstrates how a machine can "learn" to play a game. Students play a simple game like Hexapawn against a "machine" made of matchboxes or paper. The machine learns from its mistakes and eventually becomes an unbeatable player. This teaches the core concept of reinforcement learning.</p>
-          <img src={asset('images/intelligent-paper-rules.svg')} alt="Intelligent Paper Game Rules" className="activity-image" />
+          <img src={asset('images/intelligent-paper-rules.png')} alt="Intelligent Paper Game Rules" className="activity-image" />
           <Link to="/machine-learning" className="back-link">See Machine Learning in Action</Link>
 
           <h3>Computer Vision: "I Spy" with a Twist</h3>

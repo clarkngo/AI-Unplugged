@@ -79,7 +79,7 @@ Future changes: For any new or modified routes, components, or public assets, ad
 ## 2025-10-16T02:20:00Z
 
 - Migrated all lesson images from `reference/` into `public/images/` and updated pages to use public URLs.
-  - Files: `public/images/*` (intelligent-paper-rules.svg, hexapawn-board.svg, happy-face.svg, sad-face.svg, surprised-face.svg, brain-in-a-bag.svg, story-dice.svg, ai-ethics-scenarios.svg, robot-design.svg)
+  - Files: `public/images/*` (intelligent-paper-rules.png, hexapawn-board.svg, happy-face.svg, sad-face.svg, surprised-face.svg, brain-in-a-bag.svg, story-dice.svg, ai-ethics-scenarios.svg, robot-design.png)
   - Reasoning: Treat `reference/` as an archive; ensure the app is self-contained at runtime and deployable via GitHub Pages.
 - Introduced `src/utils/paths.js` with `asset()` helper that respects Vite `import.meta.env.BASE_URL`.
   - Reasoning: Guarantee correct image paths in both local dev (`/`) and production on GitHub Pages (`/AI-Unplugged/`).

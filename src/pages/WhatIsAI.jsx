@@ -35,7 +35,6 @@ export default function WhatIsAI() {
                 <div className="step-num">1</div>
                 <div className="step-body">
                   <p>Draw a Tic-Tac-Toe board on paper.</p>
-                  <img src={"/AI-Unplugged/images/intelligent-paper-rules.svg"} alt="draw board" />
                 </div>
               </div>
               <div className="step">
@@ -66,7 +65,7 @@ export default function WhatIsAI() {
               <li>The player goes first, putting an X in any square.</li>
               <li>Now it's your turn to be the computer! Follow these rules to decide where to put your O:</li>
             </ol>
-            <img src={asset('images/intelligent-paper-rules.svg')} alt="Intelligent Paper Game Rules" className="activity-image" />
+            <img src={asset('images/intelligent-paper-rules.png')} alt="Intelligent Paper Game Rules" className="activity-image" />
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

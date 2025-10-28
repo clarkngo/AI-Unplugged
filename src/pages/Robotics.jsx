@@ -31,7 +31,6 @@ export default function Robotics() {
             <p>
               Let's design a robot to solve a problem! What kind of robot would you build?
             </p>
-            <img src={asset('images/robot-design.svg')} alt="Robot Design Activity" className="activity-image" />
             <div className="activity-visual">
               <div className="step">
                 <div className="step-num">1</div>
@@ -53,6 +52,7 @@ export default function Robotics() {
                 </div>
               </div>
             </div>
+            <img src={asset('images/robot-design.png')} alt="Robot Design Activity" className="activity-image" />
             <h4>Your Mission:</h4>
             <p>Design a robot that can help you with a chore you don't like to do. For example, a robot that cleans your room, does your homework, or walks the dog.</p>
             <h4>Think about:</h4>

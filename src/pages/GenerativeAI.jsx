@@ -35,7 +35,6 @@ export default function GenerativeAI() {
                 <div className="step-num">1</div>
                 <div className="step-body">
                   <p>Roll for a character, setting, and problem.</p>
-                  <img src={"/AI-Unplugged/images/story-dice.svg"} alt="story dice" />
                 </div>
               </div>
               <div className="step">
@@ -60,7 +59,7 @@ export default function GenerativeAI() {
             </ul>
             <h4>How to Play:</h4>
             <p>We'll create a story with a character, a setting, and a problem. Roll a die for each one to see what you get!</p>
-            <img src={asset('images/story-dice.svg')} alt="Story Dice Game" className="activity-image" />
+            <img src={asset('images/story-dice.png')} alt="Story Dice Game" className="activity-image" />
             <ol>
               <li><strong>Roll for your character:</strong> Who is the hero of your story?</li>
               <li><strong>Roll for your setting:</strong> Where does your story take place?</li>

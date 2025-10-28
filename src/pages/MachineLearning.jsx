@@ -39,7 +39,6 @@ export default function MachineLearning() {
                 <div className="step-num">1</div>
                 <div className="step-body">
                   <p>Set up Hexapawn on a 3×3 grid with coins.</p>
-                  <img src={"/AI-Unplugged/images/hexapawn-board.svg"} alt="hexapawn board" />
                 </div>
               </div>
               <div className="step">
@@ -67,7 +66,7 @@ export default function MachineLearning() {
             </ul>
             <h4>How to Play:</h4>
             <p>This game is called Hexapawn. The goal is to get one of your coins to the other side of the board, or to stop the other player from being able to move.</p>
-            <img src={asset('images/hexapawn-board.svg')} alt="Hexapawn Game Board" className="activity-image" />
+            <img src={asset('images/hexapawn-board.png')} alt="Hexapawn Game Board" className="activity-image" />
             <ol>
               <li>Set up the board with the coins in the first row on each side.</li>
               <li>You go first. You can move one of your coins forward one space, or capture one of the computer's coins by moving diagonally.</li>
