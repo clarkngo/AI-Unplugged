@@ -30,7 +30,6 @@ export default function AIEthics() {
             <p>
               Let's think about some different situations and decide if the AI is being fair or unfair.
             </p>
-            <img src={asset('images/ai-ethics-scenarios.svg')} alt="AI Ethics Scenarios" className="activity-image" />
             <div className="activity-visual">
               <div className="step">
                 <div className="step-num">1</div>
@@ -59,6 +58,7 @@ export default function AIEthics() {
               <li>An AI is helping a teacher grade homework. The AI gives better grades to students who use fancy words. Is that fair?</li>
             </ul>
             <p>What do you think? There are no easy answers! These are the kinds of questions that people who work in AI ethics think about every day.</p>
+            <img src={asset('images/ai-ethics-scenarios.png')} alt="AI Ethics Scenarios" className="activity-image" />
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
