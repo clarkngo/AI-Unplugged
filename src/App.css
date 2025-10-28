@@ -229,6 +229,22 @@ body {
   display: block;
 }
 
+/* Benefit visuals used in the How to Teach page */
+.benefit {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 8px 0 14px;
+}
+.benefit-image {
+  width: 120px;
+  max-width: 28%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
 .face-examples {
   display: flex;
   gap: 20px;
