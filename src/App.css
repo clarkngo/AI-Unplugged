@@ -267,6 +267,26 @@ body {
   .activity-figures img { max-width: 100%; flex-basis: 100%; }
 }
 
+/* K-12 STEM cards */
+.k12-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 18px 0 24px;
+}
+.k12-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 14px rgba(2,6,23,0.04);
+  text-align: left;
+}
+.k12-card h3 { margin-top: 8px; margin-bottom: 8px; font-size: 18px; }
+.k12-icon { font-size: 34px; }
+.k12-card p { color: var(--muted); margin-bottom: 12px; }
+.k12-card .back-link { display: inline-block; margin-top: 6px; }
+
 .face-examples {
   display: flex;
   gap: 20px;
