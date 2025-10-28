@@ -36,7 +36,6 @@ export default function NLP() {
                   <div className="step-num">1</div>
                   <div className="step-body">
                     <p>Start with an equal number of colored beads in a bag.</p>
-                    <img src={asset('images/brain-in-a-bag-start.png')} alt="Brain-in-a-bag — start" />
                   </div>
                 </div>
                 <div className="step">
@@ -54,6 +53,10 @@ export default function NLP() {
                   </div>
                 </div>
               </div>
+            <div className="activity-figures">
+              <img src={asset('images/brain-in-a-bag-start.png')} alt="Brain-in-a-bag — start" />
+              <img src={asset('images/brain-in-a-bag-end.png')} alt="Brain in a Bag — result" className="activity-image" />
+            </div>
             <h4>You will need:</h4>
             <ul>
               <li>A bag</li>
@@ -71,7 +74,6 @@ export default function NLP() {
               <li>If you guessed incorrectly, your friend says "No!". To "punish" the brain, you take the bead out of the bag.</li>
               <li>Play again! Over time, the bag will have more of the color that your friend picked, and you will be more likely to guess correctly. The "brain" has learned!</li>
             </ol>
-            <img src={asset('images/brain-in-a-bag-end.png')} alt="Brain in a Bag — result" className="activity-image" />
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
