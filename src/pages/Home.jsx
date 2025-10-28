@@ -20,6 +20,30 @@ export default function Home() {
           </Link>
         </div>
 
+        <h2 className="section-title">STEM K‑12 Pathways</h2>
+        <div className="lesson-grid">
+          <Link to="/k12" className="lesson-card">
+            <div className="icon">🧭</div>
+            <h2>STEM K‑12</h2>
+            <p>Curated pathways and printable packs for K–12 teachers and facilitators.</p>
+          </Link>
+          <Link to="/k-1-4" className="lesson-card">
+            <div className="icon">🧩</div>
+            <h2>K 1–4</h2>
+            <p>Playful, unplugged introductions for early learners.</p>
+          </Link>
+          <Link to="/k-5-8" className="lesson-card">
+            <div className="icon">🔧</div>
+            <h2>K 5–8</h2>
+            <p>Hands-on projects that mix unplugged and simple digital tools.</p>
+          </Link>
+          <Link to="/k-9-12" className="lesson-card">
+            <div className="icon">🚀</div>
+            <h2>K 9–12</h2>
+            <p>Deeper explorations of models, ethics and creative AI.</p>
+          </Link>
+        </div>
+
         <h2 id="activities" className="section-title">Activities</h2>
         <div className="lesson-grid">
           <Link to="/machine-learning" className="lesson-card">

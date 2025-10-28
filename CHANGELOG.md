@@ -89,6 +89,24 @@ Future changes: For any new or modified routes, components, or public assets, ad
   - Reasoning: Improve maintainability, readability, and future extensibility without changing route structure.
 
 ## 2025-10-16T02:35:00Z
+- Added placeholder pages and routes for K-12 grade bands and corrected naming.
+  - Files: `src/pages/K1to4.jsx`, `src/pages/K5to8.jsx`, `src/pages/K9to12.jsx`, `src/App.jsx`.
+  - Changes:
+    - Created new page components for K-4, 5-8, and 9-12 grade bands.
+    - Added routes `/k-1-4`, `/k-5-8`, and `/k-9-12` to `App.jsx`.
+    - Renamed files and components from `K1-4` to `K1to4` (etc.) to follow valid JS identifier conventions.
+  - Reasoning: Fulfill the site structure implied by links on the Home and STEM K-12 pages and ensure component names are valid identifiers.
+
+## 2025-10-16T02:35:00Z
+
+- Added detailed lesson plans for K-12 grade bands and refactored into a reusable component.
+  - Files: `src/pages/K1to4.jsx`, `src/pages/K5to8.jsx`, `src/pages/K9to12.jsx`, `src/components/LessonPlan.jsx`, `src/App.css`.
+  - Changes:
+    - Created a reusable `LessonPlan.jsx` component to standardize lesson structure.
+    - Refactored K-12 pages to use the new component.
+    - Added a third lesson to each grade band page to align with `STEMK12.jsx` content.
+    - Added a "Printable pack" button to each lesson page.
+  - Reasoning: Improve code maintainability by reducing duplication and enhance user experience by providing more complete, actionable content for educators.
 
 - Updated site branding and hero title from "AI Adventures for Kids" to "AI Unplugged"; adjusted emojis to match the unplugged theme.
   - Files: `src/components/Header.jsx` (hero title), `src/components/NavBar.jsx` (brand text)
@@ -99,4 +117,3 @@ Future changes: For any new or modified routes, components, or public assets, ad
 - Updated HTML document title and Open Graph title to "🔌 AI Unplugged"; aligned README to project branding and usage.
   - Files: `index.html` (title, og:title), `README.md` (project readme)
   - Reasoning: Ensure consistent branding across the document title, social previews, and repository documentation.
-

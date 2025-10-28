@@ -5,9 +5,9 @@ This repository renders an elegant React single-page application (SPA) using Vit
 - Router: Use `HashRouter` (not `BrowserRouter`). This ensures compatibility with static hosting and avoids 404s on page refresh.
 - Pages: Keep one route per lesson (see existing routes in `App.jsx`).
 - Styles: Maintain the elegant design defined in `src/App.css`. Favor modern, accessible UI patterns.
-- Assets: Do NOT import from the `reference/` folder anymore. The `reference/` directory is archival context and must be ignored for future code and asset imports. If you need images, place them under `public/` or `src/assets/` and import/reference them from there.
+- Assets: Do NOT import from the `archive/` folder anymore. The `archive/` directory is archival context and must be ignored for future code and asset imports. If you need images, place them under `public/` or `src/assets/` and import/reference them from there.
 - Accessibility: Use semantic headings, meaningful alt text, and sufficient color contrast.
-- Reference folder policy: No new code should read or import from `reference/`. Treat it as documentation only.
+- Archive folder policy: No new code should read or import from `archive/`. Treat it as documentation only.
 
 Documentation discipline:
 
