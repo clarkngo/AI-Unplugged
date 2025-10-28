@@ -15,45 +15,10 @@ export default function HowToTeach() {
           <h1>Why Teach AI Without a Computer?</h1>
           <p>AI Unplugged activities are designed to teach the core concepts of Artificial Intelligence without using computers. This approach has several benefits:</p>
           <ul>
-            <li>
-              <strong>Accessible to Everyone:</strong>
-              <div className="benefit">
-                <img className="benefit-image" src={asset('images/accessible-to-everyone.png')} alt="Accessible to everyone" />
-                <div>
-                  No need for expensive hardware or high-speed internet. These activities are designed to work with simple, low-cost materials so every classroom can take part.
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <strong>Focus on Concepts:</strong>
-              <div className="benefit">
-                <img className="benefit-image" src={asset('images/focus-on-concepts.png')} alt="Focus on concepts" />
-                <div>
-                  By removing the technical jargon and code, learners can focus on the fundamental ideas behind AI — patterns, decisions, and how information flows through simple systems.
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <strong>Engaging and Fun:</strong>
-              <div className="benefit">
-                <img className="benefit-image" src={asset('images/engaging-and-fun.png')} alt="Engaging and fun" />
-                <div>
-                  Activities are hands-on, collaborative, and often feel like playing a game — which keeps learners motivated and curious.
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <strong>Develops Computational Thinking:</strong>
-              <div className="benefit">
-                <img className="benefit-image" src={asset('images/robot-design.png')} alt="Develops computational thinking" />
-                <div>
-                  These activities build skills like problem-solving, decomposition, and algorithmic thinking — the same skills programmers use to break down complex problems.
-                </div>
-              </div>
-            </li>
+            <li><strong>Accessible to Everyone:</strong> No need for expensive hardware or high-speed internet.</li>
+            <li><strong>Focus on Concepts:</strong> By removing the technical jargon and code, learners can focus on the fundamental ideas behind AI.</li>
+            <li><strong>Engaging and Fun:</strong> Activities are hands-on, collaborative, and often feel like playing a game.</li>
+            <li><strong>Develops Computational Thinking:</strong> These activities build skills like problem-solving, decomposition, and algorithmic thinking.</li>
           </ul>
 
           <div className="interactive-activity">
