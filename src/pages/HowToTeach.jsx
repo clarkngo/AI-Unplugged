@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import { asset } from '../utils/paths'
 
 export default function HowToTeach() {
   return (
@@ -31,15 +32,32 @@ export default function HowToTeach() {
 
           <h3>Machine Learning: The "Intelligent Piece of Paper"</h3>
           <p>This classic activity demonstrates how a machine can "learn" to play a game. Students play a simple game like Hexapawn against a "machine" made of matchboxes or paper. The machine learns from its mistakes and eventually becomes an unbeatable player. This teaches the core concept of reinforcement learning.</p>
+          <img src={asset('images/intelligent-paper-rules.svg')} alt="Intelligent Paper Game Rules" className="activity-image" />
           <Link to="/machine-learning" className="back-link">See Machine Learning in Action</Link>
 
           <h3>Computer Vision: "I Spy" with a Twist</h3>
           <p>How does a computer "see"? Play a game of "I Spy" where one person (the "computer") can only ask yes/no questions about simple features like shapes, colors, and textures. This simulates how a computer vision model breaks down an image into simple, recognizable patterns.</p>
+          <img src={asset('images/happy-face.svg')} alt="Happy Face" className="activity-image" />
           <Link to="/computer-vision" className="back-link">Learn About Computer Vision</Link>
 
           <h3>Generative AI: Story Dice</h3>
           <p>Generative AI creates new things. A simple way to understand this is with story dice. Each die has a different picture on it. Roll the dice and create a story based on the pictures that come up. This mimics how a generative model uses a set of rules and data to generate new, creative outputs.</p>
+          <img src={asset('images/story-dice.svg')} alt="Story Dice Game" className="activity-image" />
           <Link to="/generative-ai" className="back-link">Discover Generative AI</Link>
+
+          <h3>NLP: Brain-in-a-Bag</h3>
+          <p>Brain-in-a-Bag is a simple, tactile way to explore how models form guesses from data. Students place tokens (beads, counters or cards) into a bag and other students try to guess properties by sampling. Over repeated rounds you can observe how the distribution of guesses changes — a small model of learning and bias.</p>
+          <div className="activity-visual">
+            <div className="step">
+              <img src={asset('images/brain-in-a-bag-start.svg')} alt="Brain-in-a-bag — start" />
+              <div className="step-body">Start: set up the bag with a mix of tokens representing the data the model will see.</div>
+            </div>
+            <div className="step">
+              <img src={asset('images/brain-in-a-bag-end.svg')} alt="Brain-in-a-bag — end" />
+              <div className="step-body">End: after several rounds of guessing and feedback, compare how the guesses (and model behaviour) shifted.</div>
+            </div>
+          </div>
+          <Link to="/nlp" className="back-link">Try Brain-in-a-Bag (NLP)</Link>
 
           <p>By using imagination and simple materials, you can unlock the complex world of AI for learners of all ages!</p>
         </div>
