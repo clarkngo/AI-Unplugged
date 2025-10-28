@@ -45,19 +45,7 @@ export default function HowToTeach() {
           <img src={asset('images/story-dice.svg')} alt="Story Dice Game" className="activity-image" />
           <Link to="/generative-ai" className="back-link">Discover Generative AI</Link>
 
-          <h3>NLP: Brain-in-a-Bag</h3>
-          <p>Brain-in-a-Bag is a simple, tactile way to explore how models form guesses from data. Students place tokens (beads, counters or cards) into a bag and other students try to guess properties by sampling. Over repeated rounds you can observe how the distribution of guesses changes — a small model of learning and bias.</p>
-          <div className="activity-visual">
-            <div className="step">
-              <img src={asset('images/brain-in-a-bag-start.png')} alt="Brain-in-a-bag — start" />
-              <div className="step-body">Start: set up the bag with a mix of tokens representing the data the model will see.</div>
-            </div>
-            <div className="step">
-              <img src={asset('images/brain-in-a-bag-end.png')} alt="Brain-in-a-bag — end" />
-              <div className="step-body">End: after several rounds of guessing and feedback, compare how the guesses (and model behaviour) shifted.</div>
-            </div>
-          </div>
-          <Link to="/nlp" className="back-link">Try Brain-in-a-Bag (NLP)</Link>
+          
 
           <p>By using imagination and simple materials, you can unlock the complex world of AI for learners of all ages!</p>
         </div>
