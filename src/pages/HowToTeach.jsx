@@ -12,31 +12,7 @@ export default function HowToTeach() {
       <Breadcrumbs trail="How to Teach AI Unplugged" />
       <div className="container">
         <div className="lesson-content">
-          <h2 id="stem-k12">STEM K‑12</h2>
-          <p>Curriculum pathways and ideas by age group — three entry points to plan lessons and choose activities that fit your students.</p>
-          <div className="k12-grid">
-            <div className="k12-card">
-              <div className="k12-icon">🧩</div>
-              <h3>K 1–4 — AI‑Unplugged</h3>
-              <p>Hands-on, play-based activities that introduce core ideas with minimal reading — perfect for early learners.</p>
-              <Link to="/k-1-4" className="back-link">Explore K 1–4</Link>
-            </div>
-
-            <div className="k12-card">
-              <div className="k12-icon">🔧</div>
-              <h3>K 5–8 — AI‑Infused</h3>
-              <p>Projects that mix unplugged tasks with simple tools or group challenges to explore how AI appears in familiar tech.</p>
-              <Link to="/k-5-8" className="back-link">Explore K 5–8</Link>
-            </div>
-
-            <div className="k12-card">
-              <div className="k12-icon">🚀</div>
-              <h3>K 9–12 — AI‑Powered</h3>
-              <p>Deeper explorations of models, ethics, and creative AI — activities that prepare students for advanced study.</p>
-              <Link to="/k-9-12" className="back-link">Explore K 9–12</Link>
-            </div>
-          </div>
-
+          <p>If you are planning lessons by age group, see our dedicated <Link to="/k12">STEM K‑12</Link> page which contains curated pathways and printable packs for each grade band.</p>
           <h1>Why Teach AI Without a Computer?</h1>
           <p>AI Unplugged activities are designed to teach the core concepts of Artificial Intelligence without using computers. This approach has several benefits:</p>
           <ul>
