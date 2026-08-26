@@ -2,6 +2,13 @@
 
 All notable structural changes to this project will be documented in this file. Use ISO 8601 timestamps (UTC) and include the reasoning for each change.
 
+## 2026-08-27T00:00:00Z
+
+- Fixed a factual contradiction introduced by the previous "Intelligent Paper" content fix: `STEMK12.jsx` and `K5to8.jsx` still paired "Hexapawn / Intelligent Paper" together as one "learning from feedback" activity, but the corrected `WhatIsAI.jsx` framing explicitly says Intelligent Paper is a static rule-lookup game that never learns — the deliberate foil to Hexapawn, not a variant of it. Removed "Intelligent Paper" from both listings so only `WhatIsAI.jsx` describes it, and each page now names only the activity it actually contains.
+  - Reasoning: caught by an independent follow-up content review; the two pages were making contradictory claims about the same named activity.
+- Deleted 10 orphaned image assets confirmed unreferenced anywhere in `src/`: `brain-in-a-bag.png`/`.svg` (superseded by the `-start`/`-end` pair), the `.svg` counterparts of five now-PNG-only activity images (`ai-ethics-scenarios`, `hexapawn-board`, `intelligent-paper-rules`, `robot-design`, `story-dice`), and the `.png` counterparts of the three face-emotion SVGs actually used in `ComputerVision.jsx`.
+  - Reasoning: dead assets with no import or reference anywhere in the codebase.
+
 ## 2026-08-26T06:03:00Z
 
 - Fixed a broken route: `NavBar` linked to `/topics` but `Topics.jsx` was never registered in `App.jsx`, so the link rendered a blank page. Added the route plus a catch-all `*` route with a new `NotFound.jsx` page.

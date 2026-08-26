@@ -37,7 +37,7 @@ export default function STEMK12() {
               <h4>Activity ideas</h4>
               <ul>
                 <li>Brain-in-a-Bag — sampling and simple reinforcement ideas.</li>
-                <li>Hexapawn / Intelligent Paper — games that show learning from feedback.</li>
+                <li>Hexapawn — a game that shows learning from feedback, win by win.</li>
                 <li>I Spy with feature questions — designing yes/no feature trees.</li>
               </ul>
               <h4>Blended / Digital options</h4>

@@ -27,7 +27,7 @@ export default function K5to8() {
             differentiation="Provide structured templates for recording observations for learners who need scaffolding; ask advanced groups to propose alternative rules."
           />
           <LessonPlan
-            title="Lesson 2 — Hexapawn / Intelligent Paper (40–60 min)"
+            title="Lesson 2 — Hexapawn (40–60 min)"
             objectives="Explore strategy, learning from simple feedback, and incremental improvement."
             materials="Paper game boards, counters, printed instructions, optional timers."
             procedure={[
