@@ -71,6 +71,20 @@ export default function ComputerVision() {
               </ul>
               <li>Mix and match your face parts to create your own emotions!</li>
             </ol>
+            <div className="face-examples">
+              <figure>
+                <img src={asset('images/happy-face.svg')} alt="A simple drawing of a happy face" className="face-icon" />
+                <figcaption>Happy</figcaption>
+              </figure>
+              <figure>
+                <img src={asset('images/sad-face.svg')} alt="A simple drawing of a sad face" className="face-icon" />
+                <figcaption>Sad</figcaption>
+              </figure>
+              <figure>
+                <img src={asset('images/surprised-face.svg')} alt="A simple drawing of a surprised face" className="face-icon" />
+                <figcaption>Surprised</figcaption>
+              </figure>
+            </div>
             <img src={asset('images/create-a-face.png')} alt="Create a Face" className="activity-image" />
           </div>
 

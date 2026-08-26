@@ -26,7 +26,7 @@ export default function MachineLearning() {
             <li><strong>Spam Filters:</strong> Your email uses machine learning to figure out which emails are spam and which are important.</li>
             <li><strong>Medical Diagnosis:</strong> Doctors can use machine learning to help them diagnose diseases by looking at medical images like X-rays.</li>
             <li><strong>Product Recommendations:</strong> When you're shopping online and the website suggests other things you might like, that's machine learning at work!</li>
-            <li><strong>Self-Driving Cars:</strong> These cars use reinforcement learning to learn how to drive safely in different situations.</li>
+            <li><strong>Self-Driving Cars:</strong> These cars use machine learning — trained on millions of miles of driving examples — to recognize the road and make safe decisions.</li>
           </ul>
 
           <div className="interactive-activity">
