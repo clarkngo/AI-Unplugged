@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
 
 export default function HowToTeach() {
   return (

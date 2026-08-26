@@ -26,8 +26,46 @@ export default function WhatIsAI() {
           </ul>
 
           <div className="interactive-activity">
-            <h3>Try an Activity</h3>
-            <p>If you'd like to see these ideas in action, try one of the hands-on activities in the Activities section — for example the <Link to="/machine-learning">Machine Learning</Link> activity explores how simple rules and learning can create surprising behaviour.</p>
+            <h3>📋 Intelligent Paper 📋</h3>
+            <p>
+              This activity turns a person into a rule-following "computer" — no screens needed! It's a hands-on way to see what <strong>symbolic AI</strong> looks like from the inside, and it's a nice contrast with the "Sweet Learning Computer" in the <Link to="/machine-learning">Machine Learning</Link> activity: this "computer" never learns, it just follows the rules it was given.
+            </p>
+            <img src={asset('images/intelligent-paper-rules.png')} alt="Two players at a table: one follows a written rule sheet to play Tic-Tac-Toe as 'the computer'" className="activity-image" />
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Draw up a Tic-Tac-Toe rule sheet: for each board shape you might see, write down the one best move.</p>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>One player becomes "the computer" and may only move by matching the board to a rule on the sheet.</p>
+                  <small>No thinking allowed — just look up the rule and follow it exactly.</small>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>The other player plays normally and tries to beat "the computer."</p>
+                  <small>Discuss: did it play well? Did it ever feel "smart," even though it never learned anything?</small>
+                </div>
+              </div>
+            </div>
+            <h4>You will need:</h4>
+            <ul>
+              <li>A Tic-Tac-Toe rule sheet (a numbered list of board positions and the move for each one)</li>
+              <li>A pencil and paper (or a printed Tic-Tac-Toe grid) to play on</li>
+              <li>A friend to play against "the computer"</li>
+            </ul>
+            <h4>How to Play:</h4>
+            <ol>
+              <li>You are "the computer." Your friend is the player and goes first.</li>
+              <li>After each of your friend's moves, find the rule on your sheet that matches the current board and make that move — nothing else.</li>
+              <li>Keep playing until someone wins or the board is full.</li>
+              <li>Talk about it afterward: "the computer" only ever followed instructions someone else wrote in advance. That's the heart of rule-based, symbolic AI!</li>
+            </ol>
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

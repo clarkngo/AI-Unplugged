@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LessonPlan from '../components/LessonPlan';
 
-export default function K5to8() { // eslint-disable-line
+export default function K5to8() {
   return (
     <>
       <div className="header">

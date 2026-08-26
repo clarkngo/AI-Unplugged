@@ -2,6 +2,23 @@
 
 All notable structural changes to this project will be documented in this file. Use ISO 8601 timestamps (UTC) and include the reasoning for each change.
 
+## 2026-08-26T06:03:00Z
+
+- Fixed a broken route: `NavBar` linked to `/topics` but `Topics.jsx` was never registered in `App.jsx`, so the link rendered a blank page. Added the route plus a catch-all `*` route with a new `NotFound.jsx` page.
+  - Reasoning: dead link and unhandled invalid hash paths are a real navigation bug.
+- Deleted `src/pages/K1-4.jsx`, `K5-8.jsx`, `K9-12.jsx` — 0-byte orphaned files left behind when they were renamed to `K1to4.jsx`/`K5to8.jsx`/`K9to12.jsx` for valid JS identifiers.
+  - Reasoning: dead code with no imports anywhere.
+- Rewrote `NavBar` to link to all ~13 routes (previously only 7 were reachable from the nav) and added a mobile hamburger menu — the old nav had no responsive handling and wrapped into an unstyled multi-line block below 860px.
+  - Reasoning: several pages (Generative AI, AI Ethics, Robotics, the K-band pathways) were only discoverable via Home; mobile nav was unusable.
+- Added a dark mode toggle (`prefers-color-scheme` default + manual override persisted in `localStorage`) and a full visual refresh in `App.css`: new type system (Baloo 2 display font + Inter body), a violet/orange gradient palette expressed as CSS variables for both themes, pill buttons, icon-badge cards, and CSS rules for `.print-btn`, `.muted`, and `.topics-list`, which were used in JSX but previously had no styles at all.
+  - Reasoning: requested site modernization; unstyled classes were rendering as unthemed browser defaults.
+- Fixed two content accuracy issues: the self-driving-car blurb in `MachineLearning.jsx` overclaimed reinforcement learning as the driving mechanism, and `NLP.jsx` mislabeled the "Brain-in-a-Bag" bead activity a "neural network" when it's the same reward/punish (reinforcement-style) mechanism as the Hexapawn activity.
+  - Reasoning: technical accuracy for an educational site.
+- Wrote real content for the "Intelligent Paper" activity on `WhatIsAI.jsx` (a Tic-Tac-Toe rule-lookup game demonstrating symbolic/rule-based AI), reusing the existing but previously unwired `intelligent-paper-rules.png` asset — the name was referenced three times across the site (`WhatIsAI`, `STEMK12`, `K5to8`) but the activity itself was never written up.
+  - Reasoning: closed a real content gap.
+- Lightened the tone of `Topics.jsx` to match the playful voice used everywhere else on the site (it read as dry/academic), and wired the existing unused `happy-face.svg`/`sad-face.svg`/`surprised-face.svg` assets into the `ComputerVision.jsx` Create-a-Face activity, which described those emotions in text but never displayed them.
+  - Reasoning: content consistency and using assets that already existed for the purpose they were made for.
+
 ## 2025-10-16T00:00:00Z
 
 - Introduced React Router with HashRouter and converted reference HTML pages into React routes.

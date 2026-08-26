@@ -4,6 +4,7 @@ import NavBar from './components/NavBar'
 import Home from './pages/Home'
 import WhatIsAI from './pages/WhatIsAI'
 import HowToTeach from './pages/HowToTeach'
+import Topics from './pages/Topics'
 import MachineLearning from './pages/MachineLearning'
 import ComputerVision from './pages/ComputerVision'
 import NLP from './pages/NLP'
@@ -14,12 +15,14 @@ import STEMK12 from './pages/STEMK12'
 import K1to4 from './pages/K1to4';
 import K5to8 from './pages/K5to8';
 import K9to12 from './pages/K9to12';
+import NotFound from './pages/NotFound'
 
 function AppLayout() {
   return (
     <>
       <NavBar />
       <Outlet />
+      <footer className="site-footer">Made with 🔌 for curious minds, everywhere.</footer>
     </>
   )
 }
@@ -32,6 +35,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/what-is-ai" element={<WhatIsAI />} />
         <Route path="/how-to-teach" element={<HowToTeach />} />
+        <Route path="/topics" element={<Topics />} />
         <Route path="/machine-learning" element={<MachineLearning />} />
         <Route path="/computer-vision" element={<ComputerVision />} />
         <Route path="/nlp" element={<NLP />} />
@@ -42,6 +46,7 @@ function App() {
         <Route path="/k-1-4" element={<K1to4 />} />
         <Route path="/k-5-8" element={<K5to8 />} />
         <Route path="/k-9-12" element={<K9to12 />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   )

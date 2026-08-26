@@ -29,7 +29,7 @@ export default function NLP() {
             <div className="interactive-activity">
             <h3>🧠 The Brain-in-a-Bag 🛍️</h3>
             <p>
-              This AI Unplugged activity is a fun way to see how a neural network can be "programmed" to learn.
+              This AI Unplugged activity is a fun way to see how a computer can learn from feedback, one guess at a time — the same reward-and-punish idea behind the Hexapawn game in the <Link to="/machine-learning">Machine Learning</Link> activity.
             </p>
               <div className="activity-visual">
                 <div className="step">
@@ -64,7 +64,7 @@ export default function NLP() {
               <li>A friend to play with</li>
             </ul>
             <h4>How to Play:</h4>
-            <p>This game simulates a simple neural network. The bag is the "brain", and the beads are like "neurons".</p>
+            <p>This game simulates a simple learning model. The bag is the "brain" and the beads are its memory — every guess reshapes it a little.</p>
             <ol>
               <li>Start with an equal number of red and black beads in the bag.</li>
               <li>Your friend will secretly pick a color (red or black).</li>
