@@ -143,7 +143,8 @@ a { color: inherit; }
 .nav-links a:hover { background: var(--accent-soft); color: var(--fg); }
 .nav-links a.active { background: var(--accent-soft); color: var(--accent); }
 
-.theme-toggle {
+.theme-toggle,
+.github-link {
   display: inline-grid;
   place-items: center;
   width: 38px;
@@ -157,7 +158,8 @@ a { color: inherit; }
   line-height: 1;
   flex: none;
 }
-.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle:hover,
+.github-link:hover { border-color: var(--accent); }
 
 .nav-toggle {
   display: none;
