@@ -22,7 +22,15 @@ function AppLayout() {
     <>
       <NavBar />
       <Outlet />
-      <footer className="site-footer">Made with 🔌 for curious minds, everywhere.</footer>
+      <footer className="site-footer">
+        <p>Made with 🔌 for curious minds, everywhere.</p>
+        <p>
+          Built by{' '}
+          <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer">
+            Clark Ngo
+          </a>
+        </p>
+      </footer>
     </>
   )
 }
