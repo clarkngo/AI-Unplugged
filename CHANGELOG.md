@@ -2,6 +2,13 @@
 
 All notable structural changes to this project will be documented in this file. Use ISO 8601 timestamps (UTC) and include the reasoning for each change.
 
+## 2026-09-16T10:45:00Z
+
+- Added a GitHub repo link (icon button, styled to match the theme toggle) to `NavBar`, pointing at `https://github.com/clarkngo/AI-Unplugged`.
+  - Reasoning: the site had no link back to its own source repo anywhere.
+- Rebuilt `dist/` and committed it. The `#4` PR that added the nav link merged without a `npm run build`, so the GitHub Pages workflow (which deploys the committed `dist/` as-is, not a fresh build) kept serving the pre-change site.
+  - Reasoning: `GEMINI.md`'s pre-push checklist requires `npm run build` before every push; this was missed and left the deployed site stale relative to `main`.
+
 ## 2026-08-27T00:00:00Z
 
 - Fixed a factual contradiction introduced by the previous "Intelligent Paper" content fix: `STEMK12.jsx` and `K5to8.jsx` still paired "Hexapawn / Intelligent Paper" together as one "learning from feedback" activity, but the corrected `WhatIsAI.jsx` framing explicitly says Intelligent Paper is a static rule-lookup game that never learns — the deliberate foil to Hexapawn, not a variant of it. Removed "Intelligent Paper" from both listings so only `WhatIsAI.jsx` describes it, and each page now names only the activity it actually contains.
