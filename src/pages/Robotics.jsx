@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
 
 export default function Robotics() {
   return (
@@ -52,7 +51,6 @@ export default function Robotics() {
                 </div>
               </div>
             </div>
-            <img src={asset('images/robot-design.png')} alt="Robot Design Activity" className="activity-image" />
             <h4>Your Mission:</h4>
             <p>Design a robot that can help you with a chore you don't like to do. For example, a robot that cleans your room, does your homework, or walks the dog.</p>
             <h4>Think about:</h4>

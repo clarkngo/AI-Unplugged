@@ -17,7 +17,7 @@ export default function K1to4() {
           <LessonPlan
             title="Lesson 1 — Story Dice (20–30 min)"
             objectives="Pattern recognition, sequencing, responding to prompts."
-            materials="Printable story dice or picture cards (1 set per group), paper, pencils."
+            materials="Dice and the Story Dice table from the Printables page, or picture cards (1 set per group), paper, pencils."
             procedure={[
               'Introduce the activity and learning goal (2 minutes).',
               'In groups, students roll the dice or pick 3 cards and use them to build a short story (10–15 minutes).',
@@ -50,8 +50,8 @@ export default function K1to4() {
             assessment="Observe student participation in discussion and their examples."
             differentiation="Use emoji cards or physical objects to represent AI concepts for non-verbal learners."
           />
-          <button className="print-btn" onClick={() => window.print()}>Printable pack (K 1–4)</button>
-          <p className="muted">The printable pack contains simple worksheets, story dice pages, and teacher notes. Use your browser's print dialog to save a PDF or print directly.</p>
+          <button type="button" className="print-btn" onClick={() => window.print()}>🖨️ Print these lesson plans (K 1–4)</button>
+          <p className="muted no-print">Printing gives you the lesson plans above. Cut-out cards, rule sheets and tables for the activities are on the <Link to="/printables">Printables</Link> page.</p>
           <Link to="/k12" className="back-link">Back to STEM K-12 Pathways</Link>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
+import { StoryDiceTables } from '../components/ActivityPrintables'
 
 export default function GenerativeAI() {
   return (
@@ -48,24 +48,35 @@ export default function GenerativeAI() {
                 <div className="step-num">3</div>
                 <div className="step-body">
                   <p>Use the elements to build a short story — edit for fun.</p>
-                  <small>This mirrors how generative models combine learned pieces.</small>
+                  <small>You just combined pieces into something new — the first half of how generative AI works.</small>
                 </div>
               </div>
             </div>
             <h4>You will need:</h4>
             <ul>
-              <li>3 dice (or you can use an online dice roller)</li>
+              <li>3 dice (or roll one die three times)</li>
+              <li>The Story Dice table below, or the <Link to="/printables/story-dice">printable version</Link></li>
               <li>Paper and a pencil</li>
             </ul>
             <h4>How to Play:</h4>
             <p>We'll create a story with a character, a setting, and a problem. Roll a die for each one to see what you get!</p>
-            <img src={asset('images/story-dice.png')} alt="Story Dice Game" className="activity-image" />
+            <StoryDiceTables />
             <ol>
               <li><strong>Roll for your character:</strong> Who is the hero of your story?</li>
               <li><strong>Roll for your setting:</strong> Where does your story take place?</li>
               <li><strong>Roll for the problem:</strong> What challenge does your character need to overcome?</li>
-              <li>Now, write a story that includes all three elements! You've just created a new story, just like a generative AI.</li>
+              <li>Now, write a story that includes all three elements!</li>
             </ol>
+            <h4>Talk about it: how is real generative AI different?</h4>
+            <p>
+              Our dice are <em>fair</em>: every face is equally likely, so &quot;a pirate chef on a floating castle&quot; is just as
+              likely as anything else. Real generative AI doesn&apos;t roll fair dice. It learned from millions of examples which
+              pieces usually go together, so its &quot;dice&quot; are <em>weighted</em> toward choices that fit.
+            </p>
+            <p>
+              <strong>Level up:</strong> build your own weighted dice with the <Link to="/nlp">Next-Word Machine</Link>, which
+              learns which word should come next from a story.
+            </p>
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

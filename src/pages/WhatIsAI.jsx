@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
+import { IntelligentPaperRules } from '../components/ActivityPrintables'
 
 export default function WhatIsAI() {
   return (
@@ -30,12 +30,11 @@ export default function WhatIsAI() {
             <p>
               This activity turns a person into a rule-following "computer" — no screens needed! It's a hands-on way to see what <strong>symbolic AI</strong> looks like from the inside, and it's a nice contrast with the "Sweet Learning Computer" in the <Link to="/machine-learning">Machine Learning</Link> activity: this "computer" never learns, it just follows the rules it was given.
             </p>
-            <img src={asset('images/intelligent-paper-rules.png')} alt="Two players at a table: one follows a written rule sheet to play Tic-Tac-Toe as 'the computer'" className="activity-image" />
             <div className="activity-visual">
               <div className="step">
                 <div className="step-num">1</div>
                 <div className="step-body">
-                  <p>Draw up a Tic-Tac-Toe rule sheet: for each board shape you might see, write down the one best move.</p>
+                  <p>Print or copy the Intelligent Paper rule sheet below.</p>
                 </div>
               </div>
               <div className="step">
@@ -55,17 +54,29 @@ export default function WhatIsAI() {
             </div>
             <h4>You will need:</h4>
             <ul>
-              <li>A Tic-Tac-Toe rule sheet (a numbered list of board positions and the move for each one)</li>
+              <li>The rule sheet below, or the <Link to="/printables/intelligent-paper">printable version</Link></li>
               <li>A pencil and paper (or a printed Tic-Tac-Toe grid) to play on</li>
               <li>A friend to play against "the computer"</li>
             </ul>
             <h4>How to Play:</h4>
             <ol>
-              <li>You are "the computer." Your friend is the player and goes first.</li>
-              <li>After each of your friend's moves, find the rule on your sheet that matches the current board and make that move — nothing else.</li>
+              <li>You are "the computer." Your friend is the player. Either of you can go first.</li>
+              <li>On each of your turns, read the rules from the top and make the move from the first rule that fits — nothing else.</li>
               <li>Keep playing until someone wins or the board is full.</li>
               <li>Talk about it afterward: "the computer" only ever followed instructions someone else wrote in advance. That's the heart of rule-based, symbolic AI!</li>
             </ol>
+            <h4>The rule sheet</h4>
+            <IntelligentPaperRules />
+            <p>
+              <strong>Fun fact:</strong> we checked these rules with a computer against every possible game. The paper never
+              loses! <strong>Challenge:</strong> cover up rule 4, 5 or 6 and try to beat it — each of those rules is there to stop a
+              trap.
+            </p>
+            <p className="activity-credit">
+              Where it comes from: inspired by cs4fn&apos;s{' '}
+              <a href="https://teachinglondoncomputing.org/free-workshops/invisible-palming-intelligent-paper-so-what-is-an-algorithm/" target="_blank" rel="noopener noreferrer">Intelligent Paper</a>{' '}
+              activity (Queen Mary University of London). The rule sheet here is our own.
+            </p>
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

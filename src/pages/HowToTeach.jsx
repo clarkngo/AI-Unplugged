@@ -11,7 +11,7 @@ export default function HowToTeach() {
       <Breadcrumbs trail="How to Teach AI Unplugged" />
       <div className="container">
         <div className="lesson-content">
-          <p>If you are planning lessons by age group, see our dedicated <Link to="/k12">STEM K‑12</Link> page which contains curated pathways and printable packs for each grade band.</p>
+          <p>If you are planning lessons by age group, see our dedicated <Link to="/k12">STEM K‑12</Link> page which contains curated pathways and printable lesson plans for each grade band.</p>
 
           <h2>Why teach AI without a computer?</h2>
           <p>Unplugged activities help learners focus on ideas — representation, rules, examples, and feedback — without getting bogged down by syntax or devices. They are inclusive, low-cost, and ideal for classrooms with limited technology.</p>
@@ -19,7 +19,7 @@ export default function HowToTeach() {
           <h2>Before you teach — quick checklist</h2>
           <ul>
             <li><strong>Learning goals:</strong> pick 1–2 clear outcomes (pattern recognition, hypothesis testing, or ethical reflection).</li>
-            <li><strong>Materials:</strong> prepare counters, paper, markers, and any printables from the printable pack.</li>
+            <li><strong>Materials:</strong> prepare counters, paper, markers, and any cards or rule sheets from the <Link to="/printables">Printables</Link> page.</li>
             <li><strong>Group size:</strong> many activities work best in pairs or small groups (3–5 students).</li>
             <li><strong>Time:</strong> 20–45 minutes per activity; combine two for a longer lesson.</li>
             <li><strong>Space:</strong> tabletop or floor space for sorting and movement activities.</li>
@@ -42,7 +42,7 @@ export default function HowToTeach() {
           </ul>
 
           <h2>Managing materials and prints</h2>
-          <p>Printable packs are formatted for classroom reuse; print pages with multiple copies per sheet when possible. Reuse counters and laminates to save time and paper.</p>
+          <p>The <Link to="/printables">Printables</Link> and lesson plans are formatted for classroom reuse; print pages with multiple copies per sheet when possible. Reuse counters and laminates to save time and paper.</p>
 
           <h2>Safety, behaviour and group management</h2>
           <ul>

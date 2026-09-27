@@ -18,6 +18,11 @@ export default function Home() {
             <h3>How to Teach AI Unplugged</h3>
             <p>A guide for educators and parents.</p>
           </Link>
+          <Link to="/printables" className="lesson-card">
+            <div className="icon">🖨️</div>
+            <h3>Printables</h3>
+            <p>Cut-out cards, rule sheets and tables for the activities.</p>
+          </Link>
         </div>
 
         <h2 className="section-title">STEM K‑12 Pathways</h2>
@@ -25,7 +30,7 @@ export default function Home() {
           <Link to="/k12" className="lesson-card">
             <div className="icon">🧭</div>
             <h3>STEM K‑12</h3>
-            <p>Curated pathways and printable packs for K–12 teachers and facilitators.</p>
+            <p>Curated pathways and printable lesson plans for K–12 teachers and facilitators.</p>
           </Link>
           <Link to="/k-1-4" className="lesson-card">
             <div className="icon">🧩</div>

@@ -2,6 +2,22 @@
 
 All notable structural changes to this project will be documented in this file. Use ISO 8601 timestamps (UTC) and include the reasoning for each change.
 
+## 2026-09-27T12:00:00Z
+
+- Replaced every AI-generated lesson image. Several contradicted the lessons they illustrated: `hexapawn-board.png` showed a 6×5 grid with 5 vs 4 coins, not the 3×3 board with 3 pawns each; the Brain-in-a-bag images were labelled "20 red / 20 black" and "30 red / 10 black" but showed different amounts; `create-a-face.png`'s rule sheet said "Surprised: frowning mouth"; and most had garbled text. Deleted all 8 PNGs (10.5 MB).
+  - Reasoning: an educational site can't show diagrams that disagree with its own instructions.
+- Added `/printables` with four generated sheets: Sweet Learning Computer matchbox cards, the Intelligent Paper rule sheet, Story Dice tables, and Next-Word Machine cups. The sheets are generated from code in `src/lib/`, so they can't disagree with the rules:
+  - `hexapawn.js` enumerates every position the computer can face. It needs 19 boxes (mirror images share one) holding 47 candies, replacing the page's "about 20". A minimax check confirmed the second player always wins Hexapawn, which backs the claim that the trained computer becomes unbeatable.
+  - `tictactoe.js` holds an original 8-rule sheet. `npm run check:paper` (now in CI) plays it against every possible opponent, whoever goes first and whichever allowed square it picks, and fails the build if it ever loses or any rule goes unused. Rules 4–6 are each needed: removing any one loses games.
+  - Reasoning: the "Printable pack" buttons printed the current web page, and the activities lacked the materials needed to run them.
+- Added `@media print` styles: hides the nav, footer and buttons, prints black on white even in dark mode, and keeps cards and tables whole across page breaks. The K‑band "Printable pack" buttons are now "Print these lesson plans" and point to Printables for the cut-outs.
+- NLP now has a language activity, **The Next-Word Machine**: a hand-built bigram model made of paper cups. It includes discussion of new sentences, confident nonsense (hallucination), and how LLMs differ.
+  - Reasoning: the old NLP activity (bead reinforcement) had nothing to do with language.
+- The bead game moved to Machine Learning as a warm-up called **The Learning Bag**, with a worked example table generated from its rules. cs4fn's real "Brain-in-a-bag" is a different activity, a neural network made of students; it is now linked as an extension instead of sharing the name. The K 5–8 "Brain-in-a-Bag" lesson was a third, unrelated black-box activity and is renamed "Mystery Box".
+- Generative AI's Story Dice now has real dice tables. The page no longer claims the random rolls "mirror how generative models combine learned pieces"; it explains that fair dice differ from weighted, learned choices and links to the Next-Word Machine.
+- Added source credits to the Sweet Learning Computer, Intelligent Paper and Learning Bag, and a Credits section in the README.
+- Topics entries that led nowhere ("Data & Representation", "Search & Strategy", "Evaluation & Bias") now link to activities. Removed unused `react.svg`, `vite.svg`, `unplugged.svg` and orphaned CSS.
+
 ## 2026-09-27T00:00:00Z
 
 - Rewrote every `resolved` URL in `package-lock.json` from `registry.npmmirror.com` to `registry.npmjs.org` (same tarballs, so the `integrity` hashes are unchanged).

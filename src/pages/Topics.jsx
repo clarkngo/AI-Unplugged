@@ -18,7 +18,7 @@ export default function Topics() {
 
             <li>
               <h3>🗂️ Data &amp; Representation</h3>
-              <p>How we describe the world so a computer can use it: counts, images, words, and labels.</p>
+              <p>How we describe the world so a computer can use it: counts, images, words, and labels — try turning a story into word cups with the <Link to="/nlp">Next-Word Machine</Link>.</p>
             </li>
 
             <li>
@@ -28,7 +28,7 @@ export default function Topics() {
 
             <li>
               <h3>🧭 Search &amp; Strategy</h3>
-              <p>Games and puzzles where a computer weighs its options and picks a move.</p>
+              <p>Games and puzzles where a computer weighs its options and picks a move — play Tic-Tac-Toe against the Intelligent Paper in <Link to="/what-is-ai">What is AI?</Link></p>
             </li>
 
             <li>
@@ -58,7 +58,7 @@ export default function Topics() {
 
             <li>
               <h3>⚖️ Evaluation &amp; Bias</h3>
-              <p>Checking a model's work and watching for unfair or unexpected results.</p>
+              <p>Checking a model's work and watching for unfair or unexpected results — see the Fair or Unfair? scenarios in <Link to="/ai-ethics">AI Ethics</Link>, and spot the Next-Word Machine's silly sentences in <Link to="/nlp">NLP</Link>.</p>
             </li>
           </ul>
 

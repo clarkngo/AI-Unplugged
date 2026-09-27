@@ -27,7 +27,7 @@ export default function STEMK12() {
                 <li>Simple drag-and-drop games (block-based) to sort images by color or shape.</li>
                 <li>Interactive slides with clickable examples and teacher-controlled prompts.</li>
               </ul>
-              <Link to="/k-1-4" className="back-link">Printable pack (K 1–4)</Link>
+              <Link to="/k-1-4" className="back-link">Lesson plans (K 1–4)</Link>
             </div>
 
             <div className="k12-card">
@@ -36,8 +36,9 @@ export default function STEMK12() {
               <p>Projects that mix unplugged tasks with simple tools or group challenges to explore how AI appears in familiar tech.</p>
               <h4>Activity ideas</h4>
               <ul>
-                <li>Brain-in-a-Bag — sampling and simple reinforcement ideas.</li>
-                <li>Hexapawn — a game that shows learning from feedback, win by win.</li>
+                <li>Mystery Box — work out a hidden rule from inputs and outputs.</li>
+                <li>Sweet Learning Computer — a candy computer that learns Hexapawn by losing.</li>
+                <li>Next-Word Machine — a paper-cup language model that writes new sentences.</li>
                 <li>I Spy with feature questions — designing yes/no feature trees.</li>
               </ul>
               <h4>Blended / Digital options</h4>
@@ -45,7 +46,7 @@ export default function STEMK12() {
                 <li>Use block-based programming (Scratch) to build simple rule-based agents.</li>
                 <li>Lightweight data collection: record observations and visualize counts in a spreadsheet.</li>
               </ul>
-              <Link to="/k-5-8" className="back-link">Printable pack (K 5–8)</Link>
+              <Link to="/k-5-8" className="back-link">Lesson plans (K 5–8)</Link>
             </div>
 
             <div className="k12-card">
@@ -63,11 +64,11 @@ export default function STEMK12() {
                 <li>Guided projects using Python Notebooks or web-based APIs for experiments (teacher-led).</li>
                 <li>Data literacy tasks: small datasets, basic visualization and bias checks.</li>
               </ul>
-              <Link to="/k-9-12" className="back-link">Printable pack (K 9–12)</Link>
+              <Link to="/k-9-12" className="back-link">Lesson plans (K 9–12)</Link>
             </div>
           </div>
 
-          <p className="muted">Each tier links to curated lessons and printable teacher packs; below are quick 'how to use' suggestions and learning outcomes to help planning.</p>
+          <p className="muted">Each tier links to printable lesson plans; activity cut-outs and rule sheets are on the <Link to="/printables">Printables</Link> page. Below are quick 'how to use' suggestions and learning outcomes to help planning.</p>
 
           <h2>How to use these pathways</h2>
           <ul>

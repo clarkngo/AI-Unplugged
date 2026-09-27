@@ -15,7 +15,7 @@ export default function K5to8() {
           <h2 className="lesson-title">Intermediate Pathway: Ages 9–13</h2>
           <p>Blend unplugged activities with simple tools and mini-projects that reveal how everyday tech uses AI.</p>
           <LessonPlan
-            title="Lesson 1 — Brain-in-a-Bag (30–45 min)"
+            title="Lesson 1 — Mystery Box (30–45 min)"
             objectives="Explore input/output behaviour, hypothesis testing, and simple rule development."
             materials="Opaque bag or box, object tokens, paper for recording, pens."
             procedure={[
@@ -29,10 +29,10 @@ export default function K5to8() {
           <LessonPlan
             title="Lesson 2 — Hexapawn (40–60 min)"
             objectives="Explore strategy, learning from simple feedback, and incremental improvement."
-            materials="Paper game boards, counters, printed instructions, optional timers."
+            materials="3×3 paper boards, counters, and one Sweet Learning Computer set per group (matchbox cards and candies from the Printables page)."
             procedure={[
-              'Explain game rules and run a demo match (5–10 minutes).',
-              'Students play repeated matches, observing how simple strategies succeed or fail (20–30 minutes).',
+              'Explain the rules and the candy computer, then run a demo match (5–10 minutes).',
+              'Groups play repeated matches against their candy computer, eating the candy for its last move each time it loses and tallying wins per game (20–30 minutes).',
               'Reflect on what changed between rounds and how experience influenced choices (10–15 minutes).',
             ]}
             assessment="Students write a short reflection describing one strategy that improved results and why."
@@ -50,8 +50,9 @@ export default function K5to8() {
             assessment="Evaluate the quality of the feature-based questions students ask."
             differentiation="Provide a list of example feature questions (color, size, shape, material) for students who need a starting point."
           />
-          <button className="print-btn" onClick={() => window.print()}>Printable pack (K 5–8)</button>
+          <button type="button" className="print-btn" onClick={() => window.print()}>🖨️ Print these lesson plans (K 5–8)</button>
           <p className="muted">Printable teacher notes, activity sheets, and simple assessment rubrics for middle-primary learners.</p>
+          <p className="muted no-print">Printing gives you the lesson plans above. Cut-out cards, rule sheets and tables for the activities are on the <Link to="/printables">Printables</Link> page.</p>
           <Link to="/k12" className="back-link">Back to STEM K-12 Pathways</Link>
         </div>
       </div>

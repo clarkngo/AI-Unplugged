@@ -50,8 +50,9 @@ export default function K9to12() {
             assessment="Evaluate the coherence of the system design: do the sensors, logic, and actuators work together to meet the goal?"
             differentiation="Provide a component library (list of sensors, motors, etc.) for groups that need more structure."
           />
-          <button className="print-btn" onClick={() => window.print()}>Printable pack (K 9–12)</button>
+          <button type="button" className="print-btn" onClick={() => window.print()}>🖨️ Print these lesson plans (K 9–12)</button>
           <p className="muted">Teacher guides include assessment prompts and extension ideas for advanced classes.</p>
+          <p className="muted no-print">Printing gives you the lesson plans above. Cut-out cards, rule sheets and tables for the activities are on the <Link to="/printables">Printables</Link> page.</p>
           <Link to="/k12" className="back-link">Back to STEM K-12 Pathways</Link>
         </div>
       </div>
