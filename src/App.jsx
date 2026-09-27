@@ -16,6 +16,8 @@ import STEMK12 from './pages/STEMK12'
 import K1to4 from './pages/K1to4';
 import K5to8 from './pages/K5to8';
 import K9to12 from './pages/K9to12';
+import Printables from './pages/Printables'
+import PrintableSheet from './pages/PrintableSheet'
 import NotFound from './pages/NotFound'
 
 const SITE_NAME = 'AI Unplugged'
@@ -35,6 +37,11 @@ const ROUTES = [
   { path: '/k-1-4', title: 'K 1–4', element: <K1to4 /> },
   { path: '/k-5-8', title: 'K 5–8', element: <K5to8 /> },
   { path: '/k-9-12', title: 'K 9–12', element: <K9to12 /> },
+  { path: '/printables', title: 'Printables', element: <Printables /> },
+  { path: '/printables/hexapawn', title: 'Sweet Learning Computer cards', element: <PrintableSheet slug="hexapawn" /> },
+  { path: '/printables/intelligent-paper', title: 'Intelligent Paper rule sheet', element: <PrintableSheet slug="intelligent-paper" /> },
+  { path: '/printables/story-dice', title: 'Story Dice tables', element: <PrintableSheet slug="story-dice" /> },
+  { path: '/printables/next-word', title: 'Next-Word Machine cups', element: <PrintableSheet slug="next-word" /> },
 ]
 
 // HashRouter keeps the previous scroll position across navigations, and every

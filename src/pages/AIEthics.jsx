@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
 
 export default function AIEthics() {
   return (
@@ -58,7 +57,6 @@ export default function AIEthics() {
               <li>An AI is helping a teacher grade homework. The AI gives better grades to students who use fancy words. Is that fair?</li>
             </ul>
             <p>What do you think? There are no easy answers! These are the kinds of questions that people who work in AI ethics think about every day.</p>
-            <img src={asset('images/ai-ethics-scenarios.png')} alt="AI Ethics Scenarios" className="activity-image" />
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

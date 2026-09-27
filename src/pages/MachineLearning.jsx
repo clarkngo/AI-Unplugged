@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
+import HexapawnBoard from '../components/HexapawnBoard'
+import { LearningBagExample } from '../components/ActivityPrintables'
+import { START, computerPositions } from '../lib/hexapawn'
+
+const boxes = computerPositions()
+const candies = boxes.reduce((sum, p) => sum + p.moves.length, 0)
 
 export default function MachineLearning() {
   return (
@@ -18,7 +23,7 @@ export default function MachineLearning() {
           <ul>
             <li><strong>Supervised Learning:</strong> This is like learning with a teacher. We give the computer lots of examples that are already labeled. For example, we show it pictures of cats that are labeled "cat" and pictures of dogs that are labeled "dog". The computer learns to tell the difference.</li>
             <li><strong>Unsupervised Learning:</strong> This is like learning on your own. We give the computer a bunch of information and it has to find patterns on its own. For example, it might group customers together based on what they buy.</li>
-            <li><strong>Reinforcement Learning:</strong> This is what the "Sweet Learning Computer" game is all about! The computer learns by trial and error. It gets rewards for good moves and punishments for bad moves. Over time, it learns to make better and better decisions.</li>
+            <li><strong>Reinforcement Learning:</strong> This is what the Learning Bag and the Sweet Learning Computer below are all about! The computer learns by trial and error. It gets rewards for good moves and punishments for bad moves. Over time, it learns to make better and better decisions.</li>
           </ul>
 
           <h2>Real-World Applications</h2>
@@ -30,52 +35,94 @@ export default function MachineLearning() {
           </ul>
 
           <div className="interactive-activity">
+            <h3>🎒 Warm-up: The Learning Bag</h3>
+            <p>
+              A quick, one-bag game that shows the core idea of learning from feedback: every right guess makes the
+              right answer a little more likely next time.
+            </p>
+            <h4>You will need:</h4>
+            <ul>
+              <li>A bag you can&apos;t see into</li>
+              <li>Beads (or counters) in two colours — about 4 of each to start, plus spares</li>
+              <li>A friend</li>
+            </ul>
+            <h4>How to Play:</h4>
+            <ol>
+              <li>Put the same number of red and black beads in the bag. This bag is the computer&apos;s &quot;brain&quot;.</li>
+              <li>Your friend secretly picks a colour and keeps it the same all game.</li>
+              <li>Pull out one bead without looking. Its colour is the computer&apos;s guess.</li>
+              <li>If your friend says &quot;Yes!&quot;, put the bead back <em>and add another of the same colour</em>. That&apos;s a reward.</li>
+              <li>If your friend says &quot;No!&quot;, leave that bead out of the bag. That&apos;s a punishment.</li>
+              <li>Keep going. Watch the chance of a right guess climb, even though the bag never &quot;knows&quot; the answer.</li>
+            </ol>
+            <LearningBagExample />
+            <p className="activity-credit">
+              Where it comes from: a one-box version of the matchbox idea below. Looking for a neural-network activity?
+              Try cs4fn&apos;s{' '}
+              <a href="https://www.cs4fn.org/teachers/activities/braininabag/" target="_blank" rel="noopener noreferrer">Brain-in-a-bag</a>,
+              where students act as neurons connected by ropes.
+            </p>
+          </div>
+
+          <div className="interactive-activity">
             <h3>🍬 The Sweet Learning Computer 🍭</h3>
             <p>
-              This is a yummy activity from AI Unplugged that shows how a "machine" made of candy can learn to play a game.
+              A &quot;computer&quot; made of cups and candy learns to play a game — and after enough games it can&apos;t be beaten.
             </p>
             <div className="activity-visual">
               <div className="step">
                 <div className="step-num">1</div>
                 <div className="step-body">
-                  <p>Set up Hexapawn on a 3×3 grid with coins.</p>
+                  <p>Set up Hexapawn on a 3×3 grid with 3 pawns each.</p>
                 </div>
               </div>
               <div className="step">
                 <div className="step-num">2</div>
                 <div className="step-body">
-                  <p>Computer (matchboxes) chooses a move using a candy token.</p>
-                  <small>Each matchbox contains candies representing possible moves.</small>
+                  <p>On its turn, the computer picks a random candy from the box that matches the board.</p>
+                  <small>The candy&apos;s colour says which move to make.</small>
                 </div>
               </div>
               <div className="step">
                 <div className="step-num">3</div>
                 <div className="step-body">
-                  <p>Reward/punish moves by adding/removing candies and play again.</p>
-                  <small>Over time the computer learns better moves.</small>
+                  <p>When the computer loses, eat the candy for its last move and play again.</p>
+                  <small>Bad moves disappear, so the computer gets better.</small>
                 </div>
               </div>
             </div>
             <h4>You will need:</h4>
             <ul>
-              <li>A friend to play with</li>
-              <li>A Hexapawn game board (a 3x3 grid)</li>
-              <li>3 coins of one color (for you) and 3 of another color (for the computer)</li>
-              <li>About 20 small boxes (like matchboxes)</li>
-              <li>Lots of candy!</li>
+              <li>A friend to play with (or play against the computer yourself)</li>
+              <li>A 3×3 board and 3 coins of one colour for you, 3 of another for the computer</li>
+              <li>{boxes.length} cups or matchboxes, each with a card from the <Link to="/printables/hexapawn">printable matchbox cards</Link></li>
+              <li>{candies} small candies in four colours (red, blue, green, yellow), plus spares</li>
             </ul>
             <h4>How to Play:</h4>
-            <p>This game is called Hexapawn. The goal is to get one of your coins to the other side of the board, or to stop the other player from being able to move.</p>
-            <img src={asset('images/hexapawn-board.png')} alt="Hexapawn Game Board" className="activity-image" />
+            <p>
+              The goal is to get one of your pawns to the far side of the board, take all of the other side&apos;s pawns,
+              or leave them with no move on their turn.
+            </p>
+            <figure className="board-figure">
+              <HexapawnBoard board={START} size={180} label="Starting position: three dark computer pawns on the top row, three light player pawns on the bottom row" />
+              <figcaption>Starting position. Dark pawns are the computer&apos;s; light pawns are yours.</figcaption>
+            </figure>
             <ol>
-              <li>Set up the board with the coins in the first row on each side.</li>
-              <li>You go first. You can move one of your coins forward one space, or capture one of the computer's coins by moving diagonally.</li>
-              <li>Now it's the computer's turn. The computer is made of the matchboxes. Each box will have a picture of a board position on it, and inside will be candies that show the possible moves from that position.</li>
-              <li>Find the box that matches the current board. Take out one candy (one move) and move the computer's coin.</li>
-              <li>If the computer wins, put the candy back and add another one! The computer is rewarded for winning.</li>
-              <li>If the computer loses, it gets "punished" by eating the candy from the last move. That move is removed from the box.</li>
-              <li>Play again! After a few games, the computer will have "learned" how to play better because it has removed its bad moves.</li>
+              <li>Put your pawns on the bottom row and the computer&apos;s pawns on the top row.</li>
+              <li>You always go first. A pawn moves one square straight forward into an empty square, or one square diagonally forward to capture.</li>
+              <li>On the computer&apos;s turn, find the box whose card matches the board (or matches it flipped left-to-right). Shake it and take out one candy without looking.</li>
+              <li>Make the move shown by the arrow of that candy&apos;s colour, and set the candy on top of the box.</li>
+              <li>If the computer loses, eat the candy from the computer&apos;s <em>last</em> move — that move is gone for good. Put the other candies back in their boxes.</li>
+              <li>If the computer wins, put all the candies back in their boxes. (Want it to learn faster? Add an extra candy of the same colour to each box it used.)</li>
+              <li>If the computer&apos;s box is empty on its turn, it gives up. Count that as a loss and eat the candy from its move before.</li>
+              <li>Play again and again. Hexapawn can always be won by the second player, so once enough losing moves are eaten, the computer never loses.</li>
             </ol>
+            <p className="activity-credit">
+              Where it comes from: adapted from cs4fn&apos;s{' '}
+              <a href="https://www.cs4fn.org/machinelearning/sweetlearningcomputer.php" target="_blank" rel="noopener noreferrer">The Sweet Learning Computer</a>{' '}
+              (Queen Mary University of London), a tastier version of Donald Michie&apos;s MENACE matchbox computer (1961).
+              Using it for Hexapawn was Martin Gardner&apos;s idea (<em>Scientific American</em>, 1962).
+            </p>
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

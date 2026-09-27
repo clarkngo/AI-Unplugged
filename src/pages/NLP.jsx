@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
-import { asset } from '../utils/paths'
+import { NextWordTrainingStory, NextWordTable } from '../components/ActivityPrintables'
+import { buildNextWordTable } from '../lib/nextword'
+
+const cupCount = buildNextWordTable().length
 
 export default function NLP() {
   return (
@@ -16,7 +19,7 @@ export default function NLP() {
 
           <h2>What's it all about?</h2>
           <p>Natural Language Processing is a type of AI that helps computers understand, interpret, and generate human language. It's a tricky thing to do, because human language is full of slang, and context matters a lot! For example, if you say "I'm feeling blue," a computer needs to understand that you mean you're sad, not that you are the color blue.</p>
-          <p>NLP uses machine learning to learn the patterns of language. By analyzing huge amounts of text and speech, computers can learn to translate languages, answer questions, and even write their own stories. The "Brain-in-a-Bag" activity is a simple way to think about how a computer can learn to make better guesses over time, which is a key part of how NLP works.</p>
+          <p>NLP uses machine learning to learn the patterns of language. By analyzing huge amounts of text and speech, computers can learn to translate languages, answer questions, and even write their own stories. One of the simplest patterns is <em>which word usually comes next</em> — and you can build a machine that learns it in the activity below.</p>
 
           <h2>Real-World Applications</h2>
           <ul>
@@ -26,54 +29,57 @@ export default function NLP() {
             <li><strong>Chatbots:</strong> Many websites have chatbots that can answer your questions. These chatbots use NLP to understand what you're asking and provide a helpful response.</li>
           </ul>
 
-            <div className="interactive-activity">
-            <h3>🧠 The Brain-in-a-Bag 🛍️</h3>
+          <div className="interactive-activity">
+            <h3>🔤 The Next-Word Machine</h3>
             <p>
-              This AI Unplugged activity is a fun way to see how a computer can learn from feedback, one guess at a time — the same reward-and-punish idea behind the Hexapawn game in the <Link to="/machine-learning">Machine Learning</Link> activity.
+              Build a tiny language model out of paper cups! It learns which word tends to come next by reading a short
+              story, then writes brand-new sentences — the same basic trick chatbots use, just much, much smaller.
             </p>
-              <div className="activity-visual">
-                <div className="step">
-                  <div className="step-num">1</div>
-                  <div className="step-body">
-                    <p>Start with an equal number of colored beads in a bag.</p>
-                  </div>
-                </div>
-                <div className="step">
-                  <div className="step-num">2</div>
-                  <div className="step-body">
-                    <p>Guess which color your friend picked by drawing a bead.</p>
-                    <small>Correct guesses are rewarded by adding a bead of that color.</small>
-                  </div>
-                </div>
-                <div className="step">
-                  <div className="step-num">3</div>
-                  <div className="step-body">
-                    <p>Over repeated plays the bag's distribution shifts toward the chosen color.</p>
-                    <small>This models how a simple learning process updates its internal state.</small>
-                  </div>
+            <div className="activity-visual">
+              <div className="step">
+                <div className="step-num">1</div>
+                <div className="step-body">
+                  <p>Read the training story and make one cup for each different word.</p>
                 </div>
               </div>
-            <div className="activity-figures">
-              <img src={asset('images/brain-in-a-bag-start.png')} alt="Brain-in-a-bag — start" />
-              <img src={asset('images/brain-in-a-bag-end.png')} alt="Brain in a Bag — result" className="activity-image" />
+              <div className="step">
+                <div className="step-num">2</div>
+                <div className="step-body">
+                  <p>Every time a word is followed by another, drop a slip with the next word into that word&apos;s cup.</p>
+                  <small>This is the &quot;training&quot;.</small>
+                </div>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <div className="step-body">
+                  <p>Start at &quot;the&quot;, draw a slip, go to that word&apos;s cup, and repeat until you draw a full stop.</p>
+                  <small>This is the machine &quot;writing&quot;.</small>
+                </div>
+              </div>
             </div>
             <h4>You will need:</h4>
             <ul>
-              <li>A bag</li>
-              <li>Many small items of two different colors (e.g., red and black beads)</li>
-              <li>A friend to play with</li>
+              <li>{cupCount} paper cups (or envelopes) and a marker</li>
+              <li>Small slips of paper — or the ready-made <Link to="/printables/next-word">printable cups and slips</Link></li>
             </ul>
+            <h4>The training story:</h4>
+            <NextWordTrainingStory />
             <h4>How to Play:</h4>
-            <p>This game simulates a simple learning model. The bag is the "brain" and the beads are its memory — every guess reshapes it a little.</p>
             <ol>
-              <li>Start with an equal number of red and black beads in the bag.</li>
-              <li>Your friend will secretly pick a color (red or black).</li>
-              <li>You will try to guess the color your friend picked.</li>
-              <li>Reach into the bag and pull out a bead. The color of the bead is your guess.</li>
-              <li>If you guessed correctly, your friend says "Yes!". To reward the "brain", you put the bead back in the bag and add another bead of the same color.</li>
-              <li>If you guessed incorrectly, your friend says "No!". To "punish" the brain, you take the bead out of the bag.</li>
-              <li>Play again! Over time, the bag will have more of the color that your friend picked, and you will be more likely to guess correctly. The "brain" has learned!</li>
+              <li>Label a cup for each different word in the story.</li>
+              <li>Go through the story word by word. For each word, write the word that comes <em>right after it</em> on a slip and drop it in that word&apos;s cup. A full stop counts as a &quot;stop&quot; slip.</li>
+              <li>Check your cups against the table below. Notice that &quot;the&quot; has lots of slips, and &quot;cat&quot; shows up in it four times — so after &quot;the&quot;, &quot;cat&quot; is the most likely next word.</li>
+              <li>Now make the machine write: say &quot;the&quot;, draw a slip from the &quot;the&quot; cup without looking, say that word, and put the slip back.</li>
+              <li>Go to the cup for the word you just said and draw again. Keep going until you draw a stop slip.</li>
+              <li>Write down the sentence. Make ten more!</li>
             </ol>
+            <NextWordTable />
+            <h4>Talk about it:</h4>
+            <ul>
+              <li>Did the machine write a sentence that was never in the story, like &quot;the cat sat on the log.&quot;? It mixed pieces it learned into something new.</li>
+              <li>Did it write something that sounds fine but is silly or untrue, like &quot;the cat saw the cat.&quot;? The machine only knows which words go together — not what is true. Real AI chatbots can make the same kind of mistake, which is why we check what they say.</li>
+              <li>Our machine only looks at <em>one</em> word to guess the next. Real language models look at thousands of words and learned from billions of sentences, so they sound much more natural.</li>
+            </ul>
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

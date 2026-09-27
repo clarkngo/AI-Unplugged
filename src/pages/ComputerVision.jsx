@@ -85,7 +85,6 @@ export default function ComputerVision() {
                 <figcaption>Surprised</figcaption>
               </figure>
             </div>
-            <img src={asset('images/create-a-face.png')} alt="Create a Face" className="activity-image" />
           </div>
 
           <Link to="/" className="back-link">🏡 Back to All Lessons</Link>

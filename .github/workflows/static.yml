@@ -32,6 +32,8 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
+      - name: Check Intelligent Paper rules never lose
+        run: npm run check:paper
       - name: Build
         run: npm run build
       - name: Upload artifact
