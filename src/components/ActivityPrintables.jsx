@@ -3,6 +3,8 @@
 import HexapawnBoard from './HexapawnBoard'
 import { computerPositions, MOVE_COLORS } from '../lib/hexapawn'
 import { STORY_DICE } from '../lib/storydice'
+import { PIXEL_PUZZLE, runLengths } from '../lib/pixels'
+import { TRAINING, TEST, EXTRA_TRAINING } from '../lib/fruit'
 import { RULES } from '../lib/tictactoe'
 import { buildNextWordTable, TRAINING_STORY, END } from '../lib/nextword'
 
@@ -194,5 +196,76 @@ export function LearningBagExample({ secret = 'red', start = 4 }) {
         </tbody>
       </table>
     </div>
+  )
+}
+
+export function PixelGrid({ rows, blank = false, label }) {
+  return (
+    <div
+      className={`pixel-grid${blank ? ' pixel-grid-blank' : ''}`}
+      style={{ '--cols': rows[0].length }}
+      role="img"
+      aria-label={label}
+    >
+      {rows.flatMap((row, r) => [...row].map((bit, c) => (
+        <span key={`${r}-${c}`} className={!blank && bit === '1' ? 'on' : undefined} />
+      )))}
+    </div>
+  )
+}
+
+export function PixelPuzzle({ withRunLengths = false }) {
+  const { rows } = PIXEL_PUZZLE
+  return (
+    <div className="pixel-puzzle">
+      <div>
+        <h4>The numbers</h4>
+        <ol className="pixel-rows">
+          {rows.map((row, i) => (
+            <li key={i}>
+              <code>{row}</code>
+              {withRunLengths && <span className="muted"> → {runLengths(row).join(', ')}</span>}
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div>
+        <h4>Your grid</h4>
+        <PixelGrid rows={rows} blank label="An empty 10 by 10 grid to colour in" />
+      </div>
+    </div>
+  )
+}
+
+const FRUIT_SETS = {
+  training: { title: 'Training cards', cards: TRAINING },
+  test: { title: 'Test cards', cards: TEST },
+  extra: { title: 'Extra training cards (for “fix the data”)', cards: EXTRA_TRAINING },
+}
+
+// Cards show colour and shape; skin is on a fold-under strip so it stays
+// hidden until the "fix it" step. Test cards hide the fruit name too.
+export function FruitCards({ set }) {
+  const { title, cards } = FRUIT_SETS[set]
+  return (
+    <>
+      <h4>{title}</h4>
+      <div className="card-grid fruit-grid">
+        {cards.map((c, i) => (
+          <div className="print-card fruit-card" key={i}>
+            <p className="fruit-name">{set === 'test' ? `Test ${String.fromCharCode(65 + i)}: ?` : c.fruit}</p>
+            <p><strong>Colour:</strong> {c.colour}</p>
+            <p><strong>Shape:</strong> {c.shape}</p>
+            <p className="fruit-fold">✂ fold under ✂</p>
+            <p><strong>Skin:</strong> {c.skin}</p>
+          </div>
+        ))}
+      </div>
+      {set === 'test' && (
+        <p className="muted">
+          Teacher&apos;s answer key: {cards.map((c, i) => `${String.fromCharCode(65 + i)} = ${c.fruit}`).join(', ')}.
+        </p>
+      )}
+    </>
   )
 }

@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import GradeActivities from '../components/GradeActivities'
 
 export default function STEMK12() {
   return (
     <>
-      <div className="header"><h1>STEM K‑12</h1></div>
-      <Breadcrumbs trail="STEM K‑12" />
+      <div className="header"><h1>🧭 Grade Pathways</h1><p>Activities and printable lesson plans for each grade band, K–12.</p></div>
+      <Breadcrumbs trail="Grade Pathways" />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">STEM pathways by grade band</h2>
@@ -16,12 +17,8 @@ export default function STEMK12() {
               <div className="k12-icon">🧩</div>
               <h3 id="k1-4">K 1–4 — AI‑Unplugged</h3>
               <p>Hands-on, play-based activities that introduce core ideas with minimal reading — perfect for early learners.</p>
-              <h4>Activity ideas</h4>
-              <ul>
-                <li>What is AI? — read-aloud and class discussion using images and emojis.</li>
-                <li>Story Dice — roll and create short stories with AI prompts.</li>
-                <li>Face Features — paper collage to explore how computers see features.</li>
-              </ul>
+              <h4>Activities</h4>
+              <GradeActivities grade="k4" />
               <h4>Blended / Digital options</h4>
               <ul>
                 <li>Simple drag-and-drop games (block-based) to sort images by color or shape.</li>
@@ -34,13 +31,8 @@ export default function STEMK12() {
               <div className="k12-icon">🔧</div>
               <h3 id="k5-8">K 5–8 — AI‑Infused</h3>
               <p>Projects that mix unplugged tasks with simple tools or group challenges to explore how AI appears in familiar tech.</p>
-              <h4>Activity ideas</h4>
-              <ul>
-                <li>Mystery Box — work out a hidden rule from inputs and outputs.</li>
-                <li>Sweet Learning Computer — a candy computer that learns Hexapawn by losing.</li>
-                <li>Next-Word Machine — a paper-cup language model that writes new sentences.</li>
-                <li>I Spy with feature questions — designing yes/no feature trees.</li>
-              </ul>
+              <h4>Activities</h4>
+              <GradeActivities grade="58" />
               <h4>Blended / Digital options</h4>
               <ul>
                 <li>Use block-based programming (Scratch) to build simple rule-based agents.</li>
@@ -53,15 +45,11 @@ export default function STEMK12() {
               <div className="k12-icon">🚀</div>
               <h3 id="k9-12">K 9–12 — AI‑Powered</h3>
               <p>Deeper explorations of models, ethics, and creative AI — activities that prepare students for advanced study.</p>
-              <h4>Activity ideas</h4>
-              <ul>
-                <li>Design a Robot — systems thinking, sensors and actions.</li>
-                <li>AI Ethics scenarios — case studies and debate.</li>
-                <li>Generative projects — controlled experiments with prompts and outputs.</li>
-              </ul>
+              <h4>Activities</h4>
+              <GradeActivities grade="912" />
               <h4>Blended / Digital options</h4>
               <ul>
-                <li>Guided projects using Python Notebooks or web-based APIs for experiments (teacher-led).</li>
+                <li>Code the Next-Word Machine in Python — a short program that runs offline (<Link to="/nlp?a=next-word-python">see the activity</Link>).</li>
                 <li>Data literacy tasks: small datasets, basic visualization and bias checks.</li>
               </ul>
               <Link to="/k-9-12" className="back-link">Lesson plans (K 9–12)</Link>
@@ -77,7 +65,7 @@ export default function STEMK12() {
             <li><strong>Learning outcomes:</strong> pattern recognition, hypothesis testing, simple algorithmic thinking, and ethical reflection (older students).</li>
           </ul>
 
-          <Link to="/how-to-teach" className="back-link">Back to How to Teach</Link>
+          <Link to="/activities" className="back-link">Browse all activities</Link>
         </div>
       </div>
     </>

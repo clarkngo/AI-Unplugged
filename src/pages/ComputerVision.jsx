@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import ActivityHeader from '../components/ActivityHeader'
+import LessonPager from '../components/LessonPager'
 import { asset } from '../utils/paths'
+import { PixelGrid, PixelPuzzle } from '../components/ActivityPrintables'
+import { PIXEL_PUZZLE, runLengths } from '../lib/pixels'
 
 export default function ComputerVision() {
   return (
     <>
       <div className="header"><h1>👀 Computer Vision 🖼️</h1></div>
-      <Breadcrumbs trail="Computer Vision" />
+      <Breadcrumbs trail={[{ label: 'Lessons', to: '/lessons' }, 'Computer Vision']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">How Computers "See"</h2>
@@ -25,8 +29,8 @@ export default function ComputerVision() {
             <li><strong>Augmented Reality (AR):</strong> Fun apps like Snapchat and Instagram use computer vision to put silly masks and filters on your face in real-time.</li>
           </ul>
 
-            <div className="interactive-activity">
-            <h3>🎨 Create-a-Face 🤪</h3>
+            <div className="interactive-activity" id="create-a-face">
+            <ActivityHeader id="create-a-face" />
             <p>
               This activity from AI Unplugged helps us think about how computers can recognize emotions.
             </p>
@@ -87,7 +91,49 @@ export default function ComputerVision() {
             </div>
           </div>
 
-          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+          <div className="interactive-activity" id="pixel-pictures">
+            <ActivityHeader id="pixel-pictures" />
+            <p>
+              A camera doesn&apos;t see a face or a dog — it sees a grid of tiny squares called <strong>pixels</strong>, and each pixel
+              is just a number. Can you turn the numbers back into a picture?
+            </p>
+            <h4>You will need:</h4>
+            <ul>
+              <li>The number rows and empty grid below, or the <Link to="/printables/pixel-pictures">printable version</Link></li>
+              <li>A pencil or crayon</li>
+            </ul>
+            <h4>How to Play:</h4>
+            <ol>
+              <li>Each line of numbers is one row of the picture, from top to bottom.</li>
+              <li>Go along the row from left to right. For a <code>1</code>, colour the square in. For a <code>0</code>, leave it blank.</li>
+              <li>When every row is done, what picture did you find?</li>
+              <li>Now make your own picture on an empty grid and write down its numbers. Swap numbers with a friend and decode each other&apos;s pictures.</li>
+            </ol>
+            <PixelPuzzle />
+            <details className="reveal">
+              <summary>Reveal the picture</summary>
+              <PixelGrid rows={PIXEL_PUZZLE.rows} label={`The decoded picture: ${PIXEL_PUZZLE.answer}`} />
+              <p>It&apos;s {PIXEL_PUZZLE.answer}!</p>
+            </details>
+            <h4>Talk about it:</h4>
+            <ul>
+              <li>The computer only ever gets the numbers. How could it work out that this is a face? Try writing a rule, like &quot;two 1s with blanks around them in row 5 are eyes&quot;. Would your rule still work if the face moved one square to the left?</li>
+              <li>Rules like that break easily, which is why modern computer vision <em>learns</em> what faces look like from thousands of examples instead.</li>
+              <li>Colour photos use three numbers per pixel — how much red, green and blue — and a phone photo has millions of pixels.</li>
+            </ul>
+            <p>
+              <strong>Level up (grades 5–8):</strong> long runs of the same number waste space. Write each row as counts instead —
+              how many 0s, then how many 1s, and so on, always starting with 0s. The first row, <code>0000110000</code>, becomes{' '}
+              <code>{runLengths(PIXEL_PUZZLE.rows[0]).join(', ')}</code>. That&apos;s <em>compression</em>, the same idea that keeps
+              photo files small.
+            </p>
+            <p className="activity-credit">
+              Where it comes from: inspired by CS Unplugged&apos;s{' '}
+              <a href="https://www.csunplugged.org/en/topics/image-representation/" target="_blank" rel="noopener noreferrer">Colour by Numbers</a>{' '}
+              image representation activity.
+            </p>
+          </div>
+          <LessonPager current="/computer-vision" />
         </div>
       </div>
     </>

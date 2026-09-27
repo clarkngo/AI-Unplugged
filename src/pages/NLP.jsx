@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import ActivityHeader from '../components/ActivityHeader'
+import LessonPager from '../components/LessonPager'
 import { NextWordTrainingStory, NextWordTable } from '../components/ActivityPrintables'
-import { buildNextWordTable } from '../lib/nextword'
+import { buildNextWordTable, PYTHON_LISTING } from '../lib/nextword'
 
 const cupCount = buildNextWordTable().length
 
@@ -9,7 +11,7 @@ export default function NLP() {
   return (
     <>
       <div className="header"><h1>🗣️ Natural Language Processing 💬</h1></div>
-      <Breadcrumbs trail="Natural Language Processing" />
+      <Breadcrumbs trail={[{ label: 'Lessons', to: '/lessons' }, 'Natural Language Processing']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">How Computers "Talk"</h2>
@@ -29,8 +31,8 @@ export default function NLP() {
             <li><strong>Chatbots:</strong> Many websites have chatbots that can answer your questions. These chatbots use NLP to understand what you're asking and provide a helpful response.</li>
           </ul>
 
-          <div className="interactive-activity">
-            <h3>🔤 The Next-Word Machine</h3>
+          <div className="interactive-activity" id="next-word-machine">
+            <ActivityHeader id="next-word-machine" />
             <p>
               Build a tiny language model out of paper cups! It learns which word tends to come next by reading a short
               story, then writes brand-new sentences — the same basic trick chatbots use, just much, much smaller.
@@ -82,7 +84,29 @@ export default function NLP() {
             </ul>
           </div>
 
-          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+          <div className="interactive-activity" id="next-word-python">
+            <ActivityHeader id="next-word-python" />
+            <p>
+              Here is the exact same machine as a Python program. Instead of cups it uses a <em>dictionary</em>, and instead of
+              drawing slips it uses <code>random.choice</code>. Run it in any Python 3 — no internet or special libraries needed.
+            </p>
+            <pre className="code-block"><code>{PYTHON_LISTING}</code></pre>
+            <h4>Try it:</h4>
+            <ol>
+              <li>Run the program. Check that the dictionary it prints matches the cups and slips above.</li>
+              <li>Run it a few more times. Why are the sentences different every time?</li>
+              <li>Replace the story with your own text — song lyrics, a book chapter, your class&apos;s writing. What changes about the sentences it writes?</li>
+              <li>
+                <strong>Challenge:</strong> make the machine look at the last <em>two</em> words instead of one (use a pair of words as the
+                dictionary key). Do the sentences sound more natural? What happens with a short story?
+              </li>
+            </ol>
+            <p>
+              <strong>The big idea:</strong> this is a <em>bigram</em> model. Large language models are trained on the same task —
+              predict the next word — but they look at thousands of words of context and learn from billions of sentences.
+            </p>
+          </div>
+          <LessonPager current="/nlp" />
         </div>
       </div>
     </>

@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import ActivityHeader from '../components/ActivityHeader'
+import LessonPager from '../components/LessonPager'
 import { StoryDiceTables } from '../components/ActivityPrintables'
 
 export default function GenerativeAI() {
   return (
     <>
       <div className="header"><h1>🎨 Generative AI ✍️</h1></div>
-      <Breadcrumbs trail="Generative AI" />
+      <Breadcrumbs trail={[{ label: 'Lessons', to: '/lessons' }, 'Generative AI']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">Creating with AI</h2>
@@ -25,8 +27,8 @@ export default function GenerativeAI() {
             <li><strong>Game Design:</strong> Generative AI can be used to create new levels, characters, and worlds in video games.</li>
           </ul>
 
-          <div className="interactive-activity">
-            <h3>🎲 Story Dice 🎲</h3>
+          <div className="interactive-activity" id="story-dice">
+            <ActivityHeader id="story-dice" />
             <p>
               Let's try our own version of generative AI! We'll use dice to randomly generate ideas for a story.
             </p>
@@ -78,8 +80,7 @@ export default function GenerativeAI() {
               learns which word should come next from a story.
             </p>
           </div>
-
-          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+          <LessonPager current="/generative-ai" />
         </div>
       </div>
     </>

@@ -1,22 +1,29 @@
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
+import { LESSONS, GRADE_BANDS, ACTIVITIES } from '../lib/catalog'
+
+const BAND_BLURBS = {
+  k4: 'Playful, unplugged introductions for early learners.',
+  58: 'Hands-on projects that mix unplugged and simple digital tools.',
+  912: 'Deeper explorations of models, ethics and creative AI.',
+}
 
 export default function Home() {
   return (
     <>
       <Header />
       <div className="container">
-        <h2 className="section-title">Getting Started</h2>
+        <h2 className="section-title">Start here</h2>
         <div className="lesson-grid">
-          <Link to="/what-is-ai" className="lesson-card">
-            <div className="icon">🧠</div>
-            <h3>What is AI?</h3>
-            <p>Discover the secrets of what makes a computer "smart"!</p>
-          </Link>
           <Link to="/how-to-teach" className="lesson-card">
             <div className="icon">🎓</div>
-            <h3>How to Teach AI Unplugged</h3>
-            <p>A guide for educators and parents.</p>
+            <h3>How to Teach</h3>
+            <p>Pacing, materials and tips for educators and parents.</p>
+          </Link>
+          <Link to="/activities" className="lesson-card">
+            <div className="icon">🧰</div>
+            <h3>All {ACTIVITIES.length} Activities</h3>
+            <p>Find an activity by grade band or big idea.</p>
           </Link>
           <Link to="/printables" className="lesson-card">
             <div className="icon">🖨️</div>
@@ -25,61 +32,30 @@ export default function Home() {
           </Link>
         </div>
 
-        <h2 className="section-title">STEM K‑12 Pathways</h2>
+        <h2 id="lessons" className="section-title">Lessons</h2>
         <div className="lesson-grid">
-          <Link to="/k12" className="lesson-card">
-            <div className="icon">🧭</div>
-            <h3>STEM K‑12</h3>
-            <p>Curated pathways and printable lesson plans for K–12 teachers and facilitators.</p>
-          </Link>
-          <Link to="/k-1-4" className="lesson-card">
-            <div className="icon">🧩</div>
-            <h3>K 1–4</h3>
-            <p>Playful, unplugged introductions for early learners.</p>
-          </Link>
-          <Link to="/k-5-8" className="lesson-card">
-            <div className="icon">🔧</div>
-            <h3>K 5–8</h3>
-            <p>Hands-on projects that mix unplugged and simple digital tools.</p>
-          </Link>
-          <Link to="/k-9-12" className="lesson-card">
-            <div className="icon">🚀</div>
-            <h3>K 9–12</h3>
-            <p>Deeper explorations of models, ethics and creative AI.</p>
-          </Link>
+          {LESSONS.map((lesson) => (
+            <Link key={lesson.path} to={lesson.path} className="lesson-card">
+              <div className="icon">{lesson.icon}</div>
+              <h3>{lesson.title}</h3>
+              <p>{lesson.blurb}</p>
+            </Link>
+          ))}
         </div>
 
-        <h2 id="activities" className="section-title">Activities</h2>
+        <h2 className="section-title">Grade Pathways</h2>
         <div className="lesson-grid">
-          <Link to="/machine-learning" className="lesson-card">
-            <div className="icon">💡</div>
-            <h3>Machine Learning</h3>
-            <p>Learn how computers can learn from mistakes, just like you!</p>
-          </Link>
-          <Link to="/computer-vision" className="lesson-card">
-            <div className="icon">👀</div>
-            <h3>Computer Vision</h3>
-            <p>How do computers see and understand the world around them?</p>
-          </Link>
-          <Link to="/nlp" className="lesson-card">
-            <div className="icon">🗣️</div>
-            <h3>Natural Language Processing</h3>
-            <p>Ever wonder how your tablet understands what you say? Let's find out!</p>
-          </Link>
-          <Link to="/generative-ai" className="lesson-card">
-            <div className="icon">🎨</div>
-            <h3>Generative AI</h3>
-            <p>Can a computer be creative? Let's explore how AI can create art, music, and stories.</p>
-          </Link>
-          <Link to="/ai-ethics" className="lesson-card">
-            <div className="icon">🤝</div>
-            <h3>AI Ethics</h3>
-            <p>With great power comes great responsibility. Let's learn how to use AI fairly.</p>
-          </Link>
-          <Link to="/robotics" className="lesson-card">
-            <div className="icon">🤖</div>
-            <h3>Robotics</h3>
-            <p>Discover how AI gives robots their "brains" and brings them to life.</p>
+          {GRADE_BANDS.map((band) => (
+            <Link key={band.id} to={band.path} className="lesson-card">
+              <div className="icon">{{ k4: '🧩', 58: '🔧', 912: '🚀' }[band.id]}</div>
+              <h3>{band.label}</h3>
+              <p>{BAND_BLURBS[band.id]}</p>
+            </Link>
+          ))}
+          <Link to="/big-ideas" className="lesson-card">
+            <div className="icon">🧭</div>
+            <h3>The Five Big Ideas</h3>
+            <p>See how every activity maps to the AI4K12 framework.</p>
           </Link>
         </div>
       </div>

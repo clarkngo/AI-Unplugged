@@ -2,6 +2,28 @@
 
 All notable structural changes to this project will be documented in this file. Use ISO 8601 timestamps (UTC) and include the reasoning for each change.
 
+## 2026-09-27T18:00:00Z
+
+Curriculum:
+
+- Every activity is now mapped to the **AI4K12 Five Big Ideas** (Perception, Representation & Reasoning, Learning, Natural Interaction, Societal Impact) and tagged with grade bands and a typical time.
+  - Reasoning: teachers need standards alignment to justify class time, and there was no way to see coverage.
+- Added three activities where coverage was thinnest:
+  - **Pixel Pictures** (Computer Vision): decode a 10×10 grid of 1s and 0s into a picture, with a run-length compression extension for grades 5–8. Inspired by CS Unplugged's Colour by Numbers.
+  - **The Biased Fruit Sorter** (AI Ethics): students act as a model trained on lopsided cards, learn the colour shortcut, fail on the test cards, then fix the data and the features. Linked to Gender Shades (2018). The card sets live in `src/lib/fruit.js`, and a check proves the claims the lesson makes about them.
+  - **Code the Next-Word Machine** (NLP, grades 9–12): the paper-cup bigram model as about 20 lines of offline Python, generated from the same training story. It fills the 9–12 "Python notebooks" option, which had no content.
+- Fonts are self-hosted (`@fontsource-variable`, Latin subset, inlined by the build) and the Google Fonts links are removed, so the site renders the same offline. The build makes no external requests.
+
+Organization:
+
+- Added `src/lib/catalog.js`, the single list of lessons and activities. Home, the new **Lessons** page, the new **Activities** page (grade and big-idea filters kept in the URL), the new **Big Ideas** page, the grade pathway pages, and a new `ActivityHeader` on every activity (grades, time, big ideas, printable) are all generated from it.
+  - Reasoning: the same activities were described by hand in 4–5 places (Home, Topics, STEM K‑12 cards, K‑band pages) and had drifted apart.
+- The navbar went from 10 flat links to five sections (Lessons, Activities, Grade Pathways, Printables, How to Teach). A section stays highlighted on its sub-pages, e.g. "Lessons" on Machine Learning. The footer links every section plus Big Ideas and Credits.
+- Replaced **Topics** with **Big Ideas**. `/topics` redirects there so old links keep working. "STEM K‑12" is renamed **Grade Pathways**, and its hand-written activity lists are generated from the catalog; each K‑band page also lists every activity for that band.
+- Lesson pages have "Lessons" in their breadcrumbs and previous/next links at the bottom. Any page accepts `?a=<id>` to scroll to an activity, so the catalog and printables link straight to the right section.
+- Added a **Credits & License** page. The README's credits now point to it.
+- Added `npm run check` (runs in CI): every catalog entry must point at a real route, anchor and printable, every big idea and grade band must have at least one activity, the claims lesson text makes about generated materials must hold, and the Intelligent Paper check still runs.
+
 ## 2026-09-27T12:00:00Z
 
 - Replaced every AI-generated lesson image. Several contradicted the lessons they illustrated: `hexapawn-board.png` showed a 6×5 grid with 5 vs 4 coins, not the 3×3 board with 3 pawns each; the Brain-in-a-bag images were labelled "20 red / 20 black" and "30 red / 10 black" but showed different amounts; `create-a-face.png`'s rule sheet said "Surprised: frowning mouth"; and most had garbled text. Deleted all 8 PNGs (10.5 MB).

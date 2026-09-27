@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { LESSONS } from '../lib/catalog'
 
+// Five sections; `match` lists the path prefixes that count as "inside" each
+// one, so e.g. the Machine Learning lesson highlights "Lessons".
 const LINKS = [
-  { to: '/what-is-ai', label: 'What is AI?' },
-  { to: '/how-to-teach', label: 'How to Teach' },
-  { to: '/topics', label: 'Topics' },
-  { to: '/k12', label: 'STEM K‑12' },
-  { to: '/machine-learning', label: 'Machine Learning' },
-  { to: '/computer-vision', label: 'Computer Vision' },
-  { to: '/nlp', label: 'NLP' },
-  { to: '/generative-ai', label: 'Generative AI' },
-  { to: '/ai-ethics', label: 'AI Ethics' },
-  { to: '/robotics', label: 'Robotics' },
+  { to: '/lessons', label: 'Lessons', match: ['/lessons', ...LESSONS.map((l) => l.path)] },
+  { to: '/activities', label: 'Activities', match: ['/activities', '/big-ideas'] },
+  { to: '/k12', label: 'Grade Pathways', match: ['/k12', '/k-'] },
+  { to: '/printables', label: 'Printables', match: ['/printables'] },
+  { to: '/how-to-teach', label: 'How to Teach', match: ['/how-to-teach'] },
 ]
 
 function getInitialTheme() {
@@ -26,6 +24,8 @@ function getInitialTheme() {
 
 export default function NavBar() {
   const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+  const isActive = (link) => link.match.some((m) => pathname === m || pathname.startsWith(m.endsWith('-') ? m : `${m}/`))
   const [theme, setTheme] = useState(getInitialTheme)
 
   useEffect(() => {
@@ -76,14 +76,15 @@ export default function NavBar() {
           </button>
           <div className={`nav-links${open ? ' open' : ''}`}>
             {LINKS.map((link) => (
-              <NavLink
+              <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setOpen(false)}
-                className={({ isActive }) => (isActive ? 'active' : undefined)}
+                className={isActive(link) ? 'active' : undefined}
+                aria-current={pathname === link.to ? 'page' : isActive(link) ? 'true' : undefined}
               >
                 {link.label}
-              </NavLink>
+              </Link>
             ))}
           </div>
         </div>

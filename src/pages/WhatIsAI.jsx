@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import ActivityHeader from '../components/ActivityHeader'
+import LessonPager from '../components/LessonPager'
 import { IntelligentPaperRules } from '../components/ActivityPrintables'
 
 export default function WhatIsAI() {
   return (
     <>
       <div className="header"><h1>🧠 What is AI? 🤔</h1></div>
-      <Breadcrumbs trail="What is AI?" />
+      <Breadcrumbs trail={[{ label: 'Lessons', to: '/lessons' }, 'What is AI?']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">What in the World is Artificial Intelligence?</h2>
@@ -25,8 +27,8 @@ export default function WhatIsAI() {
             <li><strong>Movie Recommendations:</strong> When Netflix or Disney+ suggests a movie you might like, that's AI at work! It learns what you like to watch and suggests similar movies.</li>
           </ul>
 
-          <div className="interactive-activity">
-            <h3>📋 Intelligent Paper 📋</h3>
+          <div className="interactive-activity" id="intelligent-paper">
+            <ActivityHeader id="intelligent-paper" />
             <p>
               This activity turns a person into a rule-following "computer" — no screens needed! It's a hands-on way to see what <strong>symbolic AI</strong> looks like from the inside, and it's a nice contrast with the "Sweet Learning Computer" in the <Link to="/machine-learning">Machine Learning</Link> activity: this "computer" never learns, it just follows the rules it was given.
             </p>
@@ -78,8 +80,7 @@ export default function WhatIsAI() {
               activity (Queen Mary University of London). The rule sheet here is our own.
             </p>
           </div>
-
-          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+          <LessonPager current="/what-is-ai" />
         </div>
       </div>
     </>

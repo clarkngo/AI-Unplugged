@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LessonPlan from '../components/LessonPlan';
+import GradeActivities from '../components/GradeActivities';
 
 export default function K5to8() {
   return (
@@ -9,12 +10,13 @@ export default function K5to8() {
         <h1>🔧 K 5–8: Hands-On AI Projects</h1>
         <p>Hands-on projects that mix unplugged tasks with simple digital tools to explore how AI appears in familiar tech.</p>
       </div>
-      <Breadcrumbs trail={[{ label: 'STEM K‑12', to: '/k12' }, 'K 5–8']} />
+      <Breadcrumbs trail={[{ label: 'Grade Pathways', to: '/k12' }, 'K 5–8']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">Intermediate Pathway: Ages 9–13</h2>
           <p>Blend unplugged activities with simple tools and mini-projects that reveal how everyday tech uses AI.</p>
           <LessonPlan
+            id="mystery-box"
             title="Lesson 1 — Mystery Box (30–45 min)"
             objectives="Explore input/output behaviour, hypothesis testing, and simple rule development."
             materials="Opaque bag or box, object tokens, paper for recording, pens."
@@ -39,6 +41,7 @@ export default function K5to8() {
             differentiation="Use paired roles (player and recorder) so students can focus on one task at a time."
           />
           <LessonPlan
+            id="feature-questions"
             title="Lesson 3 — I Spy with Feature Questions (25-35 min)"
             objectives="Practice breaking down complex objects into simple, testable features."
             materials="A collection of classroom objects, whiteboard or chart paper."
@@ -50,10 +53,14 @@ export default function K5to8() {
             assessment="Evaluate the quality of the feature-based questions students ask."
             differentiation="Provide a list of example feature questions (color, size, shape, material) for students who need a starting point."
           />
+          <section className="no-print">
+            <h2>More activities for K 5–8</h2>
+            <GradeActivities grade="58" />
+          </section>
           <button type="button" className="print-btn" onClick={() => window.print()}>🖨️ Print these lesson plans (K 5–8)</button>
           <p className="muted">Printable teacher notes, activity sheets, and simple assessment rubrics for middle-primary learners.</p>
           <p className="muted no-print">Printing gives you the lesson plans above. Cut-out cards, rule sheets and tables for the activities are on the <Link to="/printables">Printables</Link> page.</p>
-          <Link to="/k12" className="back-link">Back to STEM K-12 Pathways</Link>
+          <Link to="/k12" className="back-link">Back to Grade Pathways</Link>
         </div>
       </div>
     </>
