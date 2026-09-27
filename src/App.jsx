@@ -1,4 +1,5 @@
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/NavBar'
 import Home from './pages/Home'
@@ -17,7 +18,41 @@ import K5to8 from './pages/K5to8';
 import K9to12 from './pages/K9to12';
 import NotFound from './pages/NotFound'
 
+const SITE_NAME = 'AI Unplugged'
+
+const ROUTES = [
+  { path: '/', title: null, element: <Home /> },
+  { path: '/what-is-ai', title: 'What is AI?', element: <WhatIsAI /> },
+  { path: '/how-to-teach', title: 'How to Teach', element: <HowToTeach /> },
+  { path: '/topics', title: 'Topics', element: <Topics /> },
+  { path: '/machine-learning', title: 'Machine Learning', element: <MachineLearning /> },
+  { path: '/computer-vision', title: 'Computer Vision', element: <ComputerVision /> },
+  { path: '/nlp', title: 'Natural Language Processing', element: <NLP /> },
+  { path: '/generative-ai', title: 'Generative AI', element: <GenerativeAI /> },
+  { path: '/ai-ethics', title: 'AI Ethics', element: <AIEthics /> },
+  { path: '/robotics', title: 'Robotics', element: <Robotics /> },
+  { path: '/k12', title: 'STEM K‑12', element: <STEMK12 /> },
+  { path: '/k-1-4', title: 'K 1–4', element: <K1to4 /> },
+  { path: '/k-5-8', title: 'K 5–8', element: <K5to8 /> },
+  { path: '/k-9-12', title: 'K 9–12', element: <K9to12 /> },
+]
+
+// HashRouter keeps the previous scroll position across navigations, and every
+// page shares one <title>; reset both whenever the route changes.
+function useRouteChangeEffects() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const route = ROUTES.find((r) => r.path === pathname)
+    const title = route ? route.title : 'Page not found'
+    document.title = title ? `${title} · 🔌 ${SITE_NAME}` : `🔌 ${SITE_NAME}`
+  }, [pathname])
+}
+
 function AppLayout() {
+  useRouteChangeEffects()
+
   return (
     <>
       <NavBar />
@@ -39,21 +74,9 @@ function App() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/what-is-ai" element={<WhatIsAI />} />
-        <Route path="/how-to-teach" element={<HowToTeach />} />
-        <Route path="/topics" element={<Topics />} />
-        <Route path="/machine-learning" element={<MachineLearning />} />
-        <Route path="/computer-vision" element={<ComputerVision />} />
-        <Route path="/nlp" element={<NLP />} />
-        <Route path="/generative-ai" element={<GenerativeAI />} />
-        <Route path="/ai-ethics" element={<AIEthics />} />
-        <Route path="/robotics" element={<Robotics />} />
-        <Route path="/k12" element={<STEMK12 />} />
-        <Route path="/k-1-4" element={<K1to4 />} />
-        <Route path="/k-5-8" element={<K5to8 />} />
-        <Route path="/k-9-12" element={<K9to12 />} />
+        {ROUTES.map((route) => (
+          <Route key={route.path} path={route.path} element={route.element} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

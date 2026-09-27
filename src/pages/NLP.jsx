@@ -9,7 +9,7 @@ export default function NLP() {
       <Breadcrumbs trail="Natural Language Processing" />
       <div className="container">
         <div className="lesson-content">
-          <h1>How Computers "Talk"</h1>
+          <h2 className="lesson-title">How Computers "Talk"</h2>
           <p>
             Isn't it cool when you can talk to a computer and it understands you? That's called Natural Language Processing, or NLP for short. It's all about teaching computers to understand and use human languages.
           </p>

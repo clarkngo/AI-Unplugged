@@ -9,7 +9,7 @@ export default function ComputerVision() {
       <Breadcrumbs trail="Computer Vision" />
       <div className="container">
         <div className="lesson-content">
-          <h1>How Computers "See"</h1>
+          <h2 className="lesson-title">How Computers "See"</h2>
           <p>
             How do you know a cat is a cat and a dog is a dog? You have eyes and a brain that's learned to tell the difference. Computer Vision is how we teach computers to do the same thing! We show the computer thousands of pictures of cats and dogs, and it learns to spot the differences.
           </p>

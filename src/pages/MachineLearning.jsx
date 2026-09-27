@@ -9,7 +9,7 @@ export default function MachineLearning() {
       <Breadcrumbs trail="Machine Learning" />
       <div className="container">
         <div className="lesson-content">
-          <h1>How Do Computers Learn?</h1>
+          <h2 className="lesson-title">How Do Computers Learn?</h2>
           <p>
             Have you ever learned how to ride a bike? You probably fell a few times before you got the hang of it. Each time you fell, your brain learned what not to do. Machine Learning is when we let computers learn in a similar way!
           </p>

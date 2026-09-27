@@ -9,7 +9,7 @@ export default function AIEthics() {
       <Breadcrumbs trail="AI Ethics" />
       <div className="container">
         <div className="lesson-content">
-          <h1>Using AI Responsibly</h1>
+          <h2 className="lesson-title">Using AI Responsibly</h2>
           <p>
             AI is a very powerful tool, so it's important to think about how we use it. Just like we learn to be kind and fair to other people, we need to make sure that the AI we create is fair and helpful to everyone.
           </p>

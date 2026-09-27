@@ -34,7 +34,7 @@ Open the local URL Vite prints. The app uses `HashRouter`, so refreshes won't 40
 
 ### GitHub Pages
 
-`vite.config.js` sets `base: '/AI-Unplugged/'` so built asset paths resolve under a project-pages subpath. Pushing to `main` builds and publishes via the workflow in [`.github/`](.github/); no manual deploy step is needed.
+`vite.config.js` sets `base: '/AI-Unplugged/'` so built asset paths resolve under a project-pages subpath. Pushing to `main` lints, builds, and publishes via the workflow in [`.github/`](.github/); no manual deploy step is needed. Pull requests run the same lint and build without deploying. `dist/` is build output and is not committed.
 
 If you fork this to a repo with a different name, update `base` in [`vite.config.js`](vite.config.js) to match.
 

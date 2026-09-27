@@ -9,10 +9,10 @@ export default function K1to4() {
         <h1>🧩 K 1–4: Playful AI Foundations</h1>
         <p>Play-based activities that introduce core ideas with minimal reading — perfect for early learners.</p>
       </div>
-      <Breadcrumbs trail="STEM K-12 > K 1–4" />
+      <Breadcrumbs trail={[{ label: 'STEM K‑12', to: '/k12' }, 'K 1–4']} />
       <div className="container">
         <div className="lesson-content">
-          <h1>Introductory Pathway: Ages 5–9</h1>
+          <h2 className="lesson-title">Introductory Pathway: Ages 5–9</h2>
           <p>Short, playful lessons that introduce core ideas through games, stories, and simple group activities.</p>
           <LessonPlan
             title="Lesson 1 — Story Dice (20–30 min)"

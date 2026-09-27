@@ -2,6 +2,19 @@
 
 All notable structural changes to this project will be documented in this file. Use ISO 8601 timestamps (UTC) and include the reasoning for each change.
 
+## 2026-09-27T00:00:00Z
+
+- Rewrote every `resolved` URL in `package-lock.json` from `registry.npmmirror.com` to `registry.npmjs.org` (same tarballs, so the `integrity` hashes are unchanged).
+  - Reasoning: the mirror is slow or unreachable outside mainland China, which made `npm ci` hang for contributors and CI.
+- The Pages workflow now runs `npm ci`, `npm run lint`, and `npm run build` itself and deploys the fresh build; pull requests run lint + build without deploying. `dist/` is now git-ignored and no longer committed.
+  - Reasoning: the workflow previously uploaded whatever `dist/` was committed, so a PR merged without a rebuild (e.g. #4) silently shipped a stale site, and nothing checked PRs at all.
+- Routes are now defined once in a `ROUTES` table in `App.jsx`, which also drives a per-page `document.title` and a scroll-to-top on every route change. Removed the duplicate `index` route alongside `/`.
+  - Reasoning: every tab/bookmark/printout was titled identically, and `HashRouter` kept the previous page's scroll position, so opening an activity from the bottom of Home landed mid-page.
+- Fixed heading hierarchy: each page now has a single `<h1>` (the header); the in-content title is an `<h2 className="lesson-title">`, and Home's card titles are `<h3>` under the section `<h2>`s.
+  - Reasoning: accessibility — screen readers rely on a single page title and nested heading levels.
+- `Breadcrumbs` is now a `<nav aria-label="Breadcrumb">`, accepts an array trail with linked parent levels, and marks the current page with `aria-current`. The K-band pages link back to STEM K‑12.
+  - Reasoning: the middle level ("STEM K-12") was plain text rather than a link.
+
 ## 2026-09-16T10:45:00Z
 
 - Added a GitHub repo link (icon button, styled to match the theme toggle) to `NavBar`, pointing at `https://github.com/clarkngo/AI-Unplugged`.
