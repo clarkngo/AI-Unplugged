@@ -6,15 +6,15 @@ Live at: **https://clarkngo.github.io/AI-Unplugged/**
 
 ## What's in it
 
-- [`src/pages/`](src/pages/) — one page per lesson: [What is AI?](src/pages/WhatIsAI.jsx), [Machine Learning](src/pages/MachineLearning.jsx), [Computer Vision](src/pages/ComputerVision.jsx), [NLP](src/pages/NLP.jsx), [Generative AI](src/pages/GenerativeAI.jsx), [AI Ethics](src/pages/AIEthics.jsx), and [Robotics](src/pages/Robotics.jsx), plus [How to Teach](src/pages/HowToTeach.jsx) and three K‑12 pathway packs ([K 1–4](src/pages/K1to4.jsx), [K 5–8](src/pages/K5to8.jsx), [K 9–12](src/pages/K9to12.jsx)).
-- [`src/components/`](src/components/) — shared `NavBar`, `Header`, `Breadcrumbs`, and `LessonPlan` components, plus the Hexapawn board diagram and the printable activity materials.
-- [`src/lib/`](src/lib/) — the logic behind the printables: Hexapawn move generation (which produces the matchbox cards), the Intelligent Paper rule sheet, the Next-Word Machine's word table, and the Story Dice faces. The printables are generated from this code, so they can't drift out of sync with the rules.
-- **Printables** (`/printables`) — cut-out matchbox cards, the Intelligent Paper rule sheet, Story Dice tables, and Next-Word Machine cups, each with print styles.
-- [`src/App.jsx`](src/App.jsx) — route table and layout; uses `HashRouter` so deep links survive a refresh on static hosting.
+- [`src/lib/catalog.js`](src/lib/catalog.js) — **the single list of lessons and activities**: each activity's lesson page, grade bands, time, AI4K12 big ideas and printable. Home, Lessons, Activities, Big Ideas, the grade pathway pages and every activity header are generated from it. Add new activities here first.
+- [`src/pages/`](src/pages/) — the seven lessons ([What is AI?](src/pages/WhatIsAI.jsx), [Machine Learning](src/pages/MachineLearning.jsx), [Computer Vision](src/pages/ComputerVision.jsx), [NLP](src/pages/NLP.jsx), [Generative AI](src/pages/GenerativeAI.jsx), [AI Ethics](src/pages/AIEthics.jsx), [Robotics](src/pages/Robotics.jsx)), each holding its activities; the browse pages ([Lessons](src/pages/Lessons.jsx), [Activities](src/pages/Activities.jsx) with grade and big-idea filters, [Big Ideas](src/pages/BigIdeas.jsx)); the grade pathways ([overview](src/pages/STEMK12.jsx), [K 1–4](src/pages/K1to4.jsx), [K 5–8](src/pages/K5to8.jsx), [K 9–12](src/pages/K9to12.jsx)) with printable lesson plans; [Printables](src/pages/Printables.jsx); [How to Teach](src/pages/HowToTeach.jsx); and [Credits](src/pages/Credits.jsx).
+- [`src/components/`](src/components/) — shared layout (`NavBar`, `Header`, `Breadcrumbs`, `LessonPager`), catalog views (`ActivityHeader`, `ActivityCard`, `GradeActivities`), `LessonPlan`, the Hexapawn board diagram, and the printable activity materials.
+- [`src/lib/`](src/lib/) — the logic behind the printables: Hexapawn move generation (which produces the matchbox cards), the Intelligent Paper rule sheet, the Next-Word Machine (and its Python listing), Pixel Pictures, the Biased Fruit Sorter cards, and the Story Dice faces. The printables are generated from this code, so they can't drift out of sync with the rules.
+- [`src/App.jsx`](src/App.jsx) — route table and layout; uses `HashRouter` so deep links survive a refresh on static hosting. `?a=<id>` on any page scrolls to that activity, e.g. `#/nlp?a=next-word-python`.
 - [`public/images/`](public/images/) — the face drawings used by the Computer Vision activity.
 - [`archive/`](archive/) — the original static-HTML version of the site, kept for reference only. Nothing in the app imports from it.
 
-Built with React 19, React Router 7, and Vite, with `vite-plugin-singlefile` inlining the production build into one `index.html`.
+Built with React 19, React Router 7, and Vite, with `vite-plugin-singlefile` inlining the production build — including the self-hosted fonts — into one `index.html`, so the site works offline once loaded.
 
 ## Quick start
 
@@ -31,7 +31,7 @@ Open the local URL Vite prints. The app uses `HashRouter`, so refreshes won't 40
 - `npm run build` — production build (run this before pushing — see [`GEMINI.md`](GEMINI.md))
 - `npm run preview` — preview the production build locally
 - `npm run lint` — run ESLint
-- `npm run check:paper` — prove by brute force that the Intelligent Paper rule sheet never loses at Tic-Tac-Toe (also runs in CI)
+- `npm run check` — content checks, also run in CI: every catalog entry points at a real page, anchor and printable; the claims lesson text makes about generated materials hold; and the Intelligent Paper rule sheet never loses at Tic-Tac-Toe (brute force over every game)
 
 ## Deploying it
 
@@ -51,7 +51,7 @@ npx serve dist
 
 ## Using it in a classroom
 
-Each lesson page is a standalone activity — pick one to project, print, or assign without needing students to work through the others first. `How to Teach` walks through pacing and materials for facilitators; the K‑12 pathway pages (`K 1–4`, `K 5–8`, `K 9–12`) bundle related activities by age band if you want a ready-made sequence instead of choosing lessons individually.
+Every activity stands alone — pick one to project, print, or assign without needing students to work through the others first. **Activities** lists them all with grade and big-idea filters (filtered views are shareable links); **Big Ideas** maps each one to the AI4K12 Five Big Ideas for standards alignment; the grade pathway pages (`K 1–4`, `K 5–8`, `K 9–12`) add printable lesson plans; and **Printables** has the cut-out cards and sheets. `How to Teach` covers pacing and materials.
 
 ## Contributing
 
@@ -61,13 +61,7 @@ Each lesson page is a standalone activity — pick one to project, print, or ass
 
 ## Credits
 
-Several activities build on classic unplugged computing ideas:
-
-- **The Sweet Learning Computer** is adapted from [cs4fn's The Sweet Learning Computer](https://www.cs4fn.org/machinelearning/sweetlearningcomputer.php) (Queen Mary University of London), itself a version of Donald Michie's MENACE matchbox computer (1961). Using it for Hexapawn was Martin Gardner's idea (*Scientific American*, March 1962).
-- **Intelligent Paper** is inspired by [cs4fn's Intelligent Paper activity](https://teachinglondoncomputing.org/free-workshops/invisible-palming-intelligent-paper-so-what-is-an-algorithm/). The rule sheet on this site is original.
-- For a neural-network activity, see [cs4fn's Brain-in-a-bag](https://www.cs4fn.org/teachers/activities/braininabag/), which is a different activity from this site's Learning Bag.
-
-All lesson text on this site is original.
+Sources and attributions for the activities are on the site's [Credits page](https://clarkngo.github.io/AI-Unplugged/#/credits) ([`src/pages/Credits.jsx`](src/pages/Credits.jsx)). All lesson text is original.
 
 ## License
 

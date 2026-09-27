@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import ActivityHeader from '../components/ActivityHeader'
+import LessonPager from '../components/LessonPager'
 
 export default function Robotics() {
   return (
     <>
       <div className="header"><h1>🤖 Robotics 🦾</h1></div>
-      <Breadcrumbs trail="Robotics" />
+      <Breadcrumbs trail={[{ label: 'Lessons', to: '/lessons' }, 'Robotics']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">AI and Robots</h2>
@@ -25,8 +26,8 @@ export default function Robotics() {
             <li><strong>At Home:</strong> You might have a robot vacuum cleaner at home that uses AI to navigate around your furniture and clean your floors.</li>
           </ul>
 
-          <div className="interactive-activity">
-            <h3>✏️ Design a Robot ✏️</h3>
+          <div className="interactive-activity" id="design-a-robot">
+            <ActivityHeader id="design-a-robot" />
             <p>
               Let's design a robot to solve a problem! What kind of robot would you build?
             </p>
@@ -62,8 +63,7 @@ export default function Robotics() {
               <li><strong>What instructions would you give it?</strong> How would you program it to do its job?</li>
             </ul>
           </div>
-
-          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+          <LessonPager current="/robotics" />
         </div>
       </div>
     </>

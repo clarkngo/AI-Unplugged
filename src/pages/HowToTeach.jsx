@@ -11,7 +11,7 @@ export default function HowToTeach() {
       <Breadcrumbs trail="How to Teach AI Unplugged" />
       <div className="container">
         <div className="lesson-content">
-          <p>If you are planning lessons by age group, see our dedicated <Link to="/k12">STEM K‑12</Link> page which contains curated pathways and printable lesson plans for each grade band.</p>
+          <p>Looking for something to run tomorrow? Browse <Link to="/activities">all activities</Link> by grade and big idea, or pick a <Link to="/k12">grade pathway</Link> with printable lesson plans. To show how the activities line up with a standards framework, see <Link to="/big-ideas">the Five Big Ideas</Link>.</p>
 
           <h2>Why teach AI without a computer?</h2>
           <p>Unplugged activities help learners focus on ideas — representation, rules, examples, and feedback — without getting bogged down by syntax or devices. They are inclusive, low-cost, and ideal for classrooms with limited technology.</p>
@@ -59,7 +59,7 @@ export default function HowToTeach() {
 
           <p>By using imagination and simple materials, you can help learners explore how data, rules and feedback combine to make systems that behave 'intelligently'.</p>
         </div>
-        <Link to="/" className="back-link">Back to All Lessons</Link>
+        <Link to="/lessons" className="back-link">Browse the lessons</Link>
       </div>
     </>
   )

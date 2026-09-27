@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Breadcrumbs from '../components/Breadcrumbs'
+import ActivityHeader from '../components/ActivityHeader'
+import LessonPager from '../components/LessonPager'
 import HexapawnBoard from '../components/HexapawnBoard'
 import { LearningBagExample } from '../components/ActivityPrintables'
 import { START, computerPositions } from '../lib/hexapawn'
@@ -11,7 +13,7 @@ export default function MachineLearning() {
   return (
     <>
       <div className="header"><h1>💡 Machine Learning 🧠</h1></div>
-      <Breadcrumbs trail="Machine Learning" />
+      <Breadcrumbs trail={[{ label: 'Lessons', to: '/lessons' }, 'Machine Learning']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">How Do Computers Learn?</h2>
@@ -34,8 +36,8 @@ export default function MachineLearning() {
             <li><strong>Self-Driving Cars:</strong> These cars use machine learning — trained on millions of miles of driving examples — to recognize the road and make safe decisions.</li>
           </ul>
 
-          <div className="interactive-activity">
-            <h3>🎒 Warm-up: The Learning Bag</h3>
+          <div className="interactive-activity" id="learning-bag">
+            <ActivityHeader id="learning-bag" />
             <p>
               A quick, one-bag game that shows the core idea of learning from feedback: every right guess makes the
               right answer a little more likely next time.
@@ -64,8 +66,8 @@ export default function MachineLearning() {
             </p>
           </div>
 
-          <div className="interactive-activity">
-            <h3>🍬 The Sweet Learning Computer 🍭</h3>
+          <div className="interactive-activity" id="sweet-learning-computer">
+            <ActivityHeader id="sweet-learning-computer" />
             <p>
               A &quot;computer&quot; made of cups and candy learns to play a game — and after enough games it can&apos;t be beaten.
             </p>
@@ -124,8 +126,7 @@ export default function MachineLearning() {
               Using it for Hexapawn was Martin Gardner&apos;s idea (<em>Scientific American</em>, 1962).
             </p>
           </div>
-
-          <Link to="/" className="back-link">🏡 Back to All Lessons</Link>
+          <LessonPager current="/machine-learning" />
         </div>
       </div>
     </>

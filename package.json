@@ -8,9 +8,12 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check:paper": "node scripts/check-intelligent-paper.mjs"
+    "check:paper": "node scripts/check-intelligent-paper.mjs",
+    "check": "node scripts/check-content.mjs && node scripts/check-intelligent-paper.mjs"
   },
   "dependencies": {
+    "@fontsource-variable/baloo-2": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4"

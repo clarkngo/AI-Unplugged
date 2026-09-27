@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LessonPlan from '../components/LessonPlan';
+import GradeActivities from '../components/GradeActivities';
 
 export default function K1to4() {
   return (
@@ -9,7 +10,7 @@ export default function K1to4() {
         <h1>🧩 K 1–4: Playful AI Foundations</h1>
         <p>Play-based activities that introduce core ideas with minimal reading — perfect for early learners.</p>
       </div>
-      <Breadcrumbs trail={[{ label: 'STEM K‑12', to: '/k12' }, 'K 1–4']} />
+      <Breadcrumbs trail={[{ label: 'Grade Pathways', to: '/k12' }, 'K 1–4']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">Introductory Pathway: Ages 5–9</h2>
@@ -50,9 +51,13 @@ export default function K1to4() {
             assessment="Observe student participation in discussion and their examples."
             differentiation="Use emoji cards or physical objects to represent AI concepts for non-verbal learners."
           />
+          <section className="no-print">
+            <h2>More activities for K 1–4</h2>
+            <GradeActivities grade="k4" />
+          </section>
           <button type="button" className="print-btn" onClick={() => window.print()}>🖨️ Print these lesson plans (K 1–4)</button>
           <p className="muted no-print">Printing gives you the lesson plans above. Cut-out cards, rule sheets and tables for the activities are on the <Link to="/printables">Printables</Link> page.</p>
-          <Link to="/k12" className="back-link">Back to STEM K-12 Pathways</Link>
+          <Link to="/k12" className="back-link">Back to Grade Pathways</Link>
         </div>
       </div>
     </>

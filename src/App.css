@@ -627,6 +627,170 @@ footer.site-footer a {
 }
 .print-footer { display: none; }
 
+/* -------------------- Activity headers & catalog -------------------- */
+[id] { scroll-margin-top: 84px; }
+
+.activity-header h3 { margin: 0 0 8px; font-family: var(--font-display); font-size: 21px; }
+.activity-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  font-size: 13px;
+}
+.activity-meta li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.meta-label { color: var(--muted); font-weight: 600; margin-right: 2px; }
+.chip {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.5;
+}
+a.chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip-idea { background: var(--accent-soft); border-color: transparent; }
+.chip-print { border-color: var(--accent-2); }
+.chip-plain { font-weight: 500; }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 20px;
+  margin: 0 auto 18px;
+  max-width: 900px;
+}
+.filters label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 14px; }
+.filters select {
+  font: inherit;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  color: var(--fg);
+  min-width: 200px;
+}
+.filters p { margin: 0 0 8px; }
+
+.activity-list { display: grid; gap: 12px; max-width: 900px; margin: 0 auto 12px; }
+.activity-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color .2s, transform .2s;
+}
+.activity-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.activity-card-icon {
+  font-size: 26px;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--accent-soft);
+}
+.activity-card-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.activity-card-summary { color: var(--fg); }
+.activity-card-meta, .activity-card-ideas { color: var(--muted); font-size: 13px; }
+.activity-card-ideas { color: var(--accent); font-weight: 600; }
+
+.lesson-card-static:hover { transform: none; }
+.lesson-card .card-title { font-family: var(--font-display); font-size: 19px; margin: 0 0 10px; }
+.lesson-card .card-title a { text-decoration: none; }
+.lesson-card .card-title a:hover { color: var(--accent); }
+.card-activity-list { list-style: none; padding: 0; margin: 12px 0 0; text-align: left; font-size: 14px; }
+.card-activity-list li { border-top: 1px solid var(--card-border); padding: 6px 0; }
+.card-activity-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.card-activity-list a:hover { text-decoration: underline; }
+
+.big-idea-toc { display: flex; flex-wrap: wrap; gap: 6px 18px; padding-left: 20px; }
+.big-idea-toc a, .grade-activities a, .credits-list a, .lesson-content p a { color: var(--accent); }
+.big-idea { border-top: 1px solid var(--card-border); padding-top: 8px; margin-top: 24px; }
+.big-idea .activity-list { margin: 12px 0; }
+
+.grade-activities { padding-left: 20px; }
+.grade-activities li { margin-bottom: 4px; }
+.k12-card .grade-activities { font-size: 14.5px; }
+
+.credits-list div { margin-bottom: 14px; }
+.credits-list dt { font-weight: 700; }
+.credits-list dd { margin: 2px 0 0; line-height: 1.6; }
+
+.lesson-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+}
+.pager-link, .pager-all {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  color: var(--fg);
+}
+.pager-link:hover, .pager-all:hover { border-color: var(--accent); color: var(--accent); }
+.pager-all { background: var(--accent); color: var(--accent-contrast); border-color: var(--accent); }
+.pager-all:hover { color: var(--accent-contrast); opacity: .9; }
+
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-bottom: 14px; }
+footer.site-footer .footer-links a { text-decoration: none; font-weight: 600; }
+footer.site-footer .footer-links a:hover { color: var(--accent); }
+
+/* -------------------- New activity materials -------------------- */
+.pixel-puzzle { display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start; margin: 12px 0; }
+.pixel-puzzle h4 { margin-top: 0; }
+.pixel-rows { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; padding-left: 28px; margin: 0; }
+.pixel-rows code { letter-spacing: 3px; font-size: 15px; }
+.pixel-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 22px);
+  grid-auto-rows: 22px;
+  width: max-content;
+  border: 2px solid var(--fg);
+}
+.pixel-grid span { border: 1px solid var(--muted); background: #fff; }
+.pixel-grid span.on { background: #1e293b; }
+.reveal { margin: 12px 0; }
+.reveal summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+.reveal .pixel-grid { margin-top: 10px; }
+
+.code-block {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.code-block code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+.fruit-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.fruit-card { text-align: left; }
+.fruit-card p { margin: 2px 0 !important; font-size: 14px; }
+.fruit-name { font-weight: 800; text-transform: capitalize; font-size: 16px !important; }
+.fruit-fold { border-top: 2px dashed var(--muted); color: var(--muted); font-size: 11px !important; text-align: center; padding-top: 2px; margin-top: 6px !important; }
+
 /* -------------------- Print -------------------- */
 @media print {
   :root, :root[data-theme="dark"] {
@@ -640,6 +804,10 @@ footer.site-footer a {
   .lesson-content { box-shadow: none !important; border: none !important; padding: 0 !important; max-width: none !important; animation: none !important; }
   .interactive-activity, .lesson-plan, .rule-sheet, .data-table, .training-story { break-inside: avoid; background: #fff !important; }
   .card-grid { grid-template-columns: repeat(3, 1fr); }
+  .fruit-grid { grid-template-columns: repeat(4, 1fr); }
+  .pixel-grid span.on { background: #000; }
+  .code-block { background: #fff; color: #000; border: 1px solid #999; }
+  .lesson-pager, .activity-meta, .reveal { display: none !important; }
   .print-footer { display: block; margin-top: 16px; }
   * { animation: none !important; transition: none !important; }
 }

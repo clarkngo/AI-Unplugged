@@ -31,3 +31,29 @@ export function buildNextWordTable(sentences = TRAINING_STORY) {
     next: [...counts].map(([next, count]) => ({ word: next, count })),
   }))
 }
+
+// The same machine in Python, for the "Code the Next-Word Machine" activity.
+export const PYTHON_LISTING = `import random
+from collections import defaultdict
+
+story = """${TRAINING_STORY.join('\n')}"""
+
+# 1. Training: for every word, collect the words that came right after it.
+words = story.replace(".", " .").split()
+next_words = defaultdict(list)
+for word, following in zip(words, words[1:]):
+    if word != ".":
+        next_words[word].append(following)
+
+# 2. Writing: start at "the" and keep drawing a random next word
+#    until we draw a full stop.
+def write_sentence(start="the"):
+    sentence = [start]
+    while sentence[-1] != ".":
+        sentence.append(random.choice(next_words[sentence[-1]]))
+    return " ".join(sentence[:-1]) + "."
+
+print(dict(next_words))
+for _ in range(5):
+    print(write_sentence())
+`

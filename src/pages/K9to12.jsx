@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LessonPlan from '../components/LessonPlan';
+import GradeActivities from '../components/GradeActivities';
 
 export default function K9to12() {
   return (
@@ -9,7 +10,7 @@ export default function K9to12() {
         <h1>🚀 K 9–12: Advanced AI Explorations</h1>
         <p>Deeper explorations of models, ethics, and creative AI — activities that prepare students for advanced study.</p>
       </div>
-      <Breadcrumbs trail={[{ label: 'STEM K‑12', to: '/k12' }, 'K 9–12']} />
+      <Breadcrumbs trail={[{ label: 'Grade Pathways', to: '/k12' }, 'K 9–12']} />
       <div className="container">
         <div className="lesson-content">
           <h2 className="lesson-title">Advanced Pathway: Ages 14–18</h2>
@@ -29,7 +30,7 @@ export default function K9to12() {
           <LessonPlan
             title="Lesson 2 — Generative Project (60–90 min)"
             objectives="Understand prompt design, controlled experimentation, and result analysis."
-            materials="Web generation tools or guided notebooks, prompt templates, output recording sheets."
+            materials="Web generation tools, or the offline Python version of the Next-Word Machine (see NLP lesson); prompt templates, output recording sheets."
             procedure={[
               'Introduce the tool and safety constraints; show examples (10 minutes).',
               'Students design prompts, run experiments, and record outputs (30–50 minutes).',
@@ -50,10 +51,14 @@ export default function K9to12() {
             assessment="Evaluate the coherence of the system design: do the sensors, logic, and actuators work together to meet the goal?"
             differentiation="Provide a component library (list of sensors, motors, etc.) for groups that need more structure."
           />
+          <section className="no-print">
+            <h2>More activities for K 9–12</h2>
+            <GradeActivities grade="912" />
+          </section>
           <button type="button" className="print-btn" onClick={() => window.print()}>🖨️ Print these lesson plans (K 9–12)</button>
           <p className="muted">Teacher guides include assessment prompts and extension ideas for advanced classes.</p>
           <p className="muted no-print">Printing gives you the lesson plans above. Cut-out cards, rule sheets and tables for the activities are on the <Link to="/printables">Printables</Link> page.</p>
-          <Link to="/k12" className="back-link">Back to STEM K-12 Pathways</Link>
+          <Link to="/k12" className="back-link">Back to Grade Pathways</Link>
         </div>
       </div>
     </>

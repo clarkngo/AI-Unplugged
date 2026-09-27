@@ -1,6 +1,6 @@
-export default function LessonPlan({ title, objectives, materials, procedure, assessment, differentiation }) {
+export default function LessonPlan({ id, title, objectives, materials, procedure, assessment, differentiation }) {
   return (
-    <section className="lesson-plan">
+    <section className="lesson-plan" id={id}>
       <h2>{title}</h2>
       <p><strong>Objectives:</strong> {objectives}</p>
       <p><strong>Materials:</strong> {materials}</p>
