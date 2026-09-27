@@ -9,7 +9,7 @@ export default function Robotics() {
       <Breadcrumbs trail="Robotics" />
       <div className="container">
         <div className="lesson-content">
-          <h1>AI and Robots</h1>
+          <h2 className="lesson-title">AI and Robots</h2>
           <p>
             What do you think of when you hear the word "robot"? You might think of a walking, talking machine from a movie. But robots are all around us, and many of them are powered by AI!
           </p>

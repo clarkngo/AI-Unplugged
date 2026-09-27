@@ -9,10 +9,10 @@ export default function K9to12() {
         <h1>🚀 K 9–12: Advanced AI Explorations</h1>
         <p>Deeper explorations of models, ethics, and creative AI — activities that prepare students for advanced study.</p>
       </div>
-      <Breadcrumbs trail="STEM K-12 > K 9–12" />
+      <Breadcrumbs trail={[{ label: 'STEM K‑12', to: '/k12' }, 'K 9–12']} />
       <div className="container">
         <div className="lesson-content">
-          <h1>Advanced Pathway: Ages 14–18</h1>
+          <h2 className="lesson-title">Advanced Pathway: Ages 14–18</h2>
           <p>Deeper activities exploring models, ethics, and creative AI — suitable for older learners preparing for further study.</p>
           <LessonPlan
             title="Lesson 1 — AI Ethics Scenario (45–60 min)"

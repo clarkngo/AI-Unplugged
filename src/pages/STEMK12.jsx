@@ -5,10 +5,10 @@ export default function STEMK12() {
   return (
     <>
       <div className="header"><h1>STEM K‑12</h1></div>
-      <Breadcrumbs trail="STEM K-12" />
+      <Breadcrumbs trail="STEM K‑12" />
       <div className="container">
         <div className="lesson-content">
-          <h1>STEM pathways by grade band</h1>
+          <h2 className="lesson-title">STEM pathways by grade band</h2>
           <p>Use these entry points to choose lessons and printable teacher packs tailored to your students' age and stage.</p>
 
           <div className="k12-grid">

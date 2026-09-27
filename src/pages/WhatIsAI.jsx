@@ -9,7 +9,7 @@ export default function WhatIsAI() {
       <Breadcrumbs trail="What is AI?" />
       <div className="container">
         <div className="lesson-content">
-          <h1>What in the World is Artificial Intelligence?</h1>
+          <h2 className="lesson-title">What in the World is Artificial Intelligence?</h2>
           <p>
             Imagine if your toys could think and learn, just like you! That's kind of what Artificial Intelligence, or AI, is all about. It's like giving a computer a "brain" so it can solve problems, play games, and even be creative!
           </p>

@@ -9,7 +9,7 @@ export default function GenerativeAI() {
       <Breadcrumbs trail="Generative AI" />
       <div className="container">
         <div className="lesson-content">
-          <h1>Creating with AI</h1>
+          <h2 className="lesson-title">Creating with AI</h2>
           <p>
             Imagine an AI that can draw a picture of a purple elephant flying in space, or write a story about a brave knight who is friends with a dragon. That's Generative AI! It's a type of AI that can create brand new things, like images, music, and stories.
           </p>

@@ -9,10 +9,10 @@ export default function K5to8() {
         <h1>🔧 K 5–8: Hands-On AI Projects</h1>
         <p>Hands-on projects that mix unplugged tasks with simple digital tools to explore how AI appears in familiar tech.</p>
       </div>
-      <Breadcrumbs trail="STEM K-12 > K 5–8" />
+      <Breadcrumbs trail={[{ label: 'STEM K‑12', to: '/k12' }, 'K 5–8']} />
       <div className="container">
         <div className="lesson-content">
-          <h1>Intermediate Pathway: Ages 9–13</h1>
+          <h2 className="lesson-title">Intermediate Pathway: Ages 9–13</h2>
           <p>Blend unplugged activities with simple tools and mini-projects that reveal how everyday tech uses AI.</p>
           <LessonPlan
             title="Lesson 1 — Brain-in-a-Bag (30–45 min)"

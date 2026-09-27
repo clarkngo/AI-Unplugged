@@ -28,6 +28,7 @@ Pre-push checklist:
 - **Always run `npm run build` before committing and pushing code.**
   - This ensures the production build succeeds and catches any build-time errors.
   - Verify the build completes with no errors or warnings.
+  - Do not commit `dist/` — it is git-ignored, and the Pages workflow builds it from source on every push to `main`.
 - Run the dev server (`npm run dev`) to visually verify changes if needed.
 - Update `CHANGELOG.md` if you made structural changes.
 
